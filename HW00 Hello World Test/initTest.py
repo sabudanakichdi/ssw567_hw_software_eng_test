@@ -5,7 +5,7 @@ import helloWorld as h
 class initTest(u.TestCase):
 
     def testHelloAsTrueCondition(self):
-        self.assertTrue(bool(h.init_func(100)))
+        self.assertTrue(bool(h.init_func(1)))
         print("Test sucessful for value TRUE")
 
     def testHelloAsFalseCondition(self):
