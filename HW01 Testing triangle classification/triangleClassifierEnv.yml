@@ -1,0 +1,7 @@
+language: python
+python:
+ - "3.10.6"
+
+script:
+ - cd '.\HW01 Testing triangle classification'
+ - python -m unittest testTriangleClassifier
