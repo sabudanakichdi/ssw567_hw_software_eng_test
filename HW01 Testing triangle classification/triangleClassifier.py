@@ -1,6 +1,6 @@
 from polygon import triangle as t
 
-class triangleClassifier(t):
+class triangleClassifierCl(t):
     def __init__(self,a,b,c):
         t.__init__(self,a,b,c)
 
@@ -25,15 +25,18 @@ class triangleClassifier(t):
                 print ("Isosceles Triangle")
             else:
                 print ("Scalene Triangle")
+                return True
 
         except ValueError:
             print("ValueError: All input value needs to be Integer")
 
+        return False
+
 if __name__ == '__main__':
-    c = triangleClassifier(1,2,3)
+    c = triangleClassifierCl(1,2,3)
     c.type_of_triangle()
-    triangleClassifier(3,4,5).type_of_triangle()
-    triangleClassifier('abc',4,5).type_of_triangle()
+    triangleClassifierCl(3,4,5).type_of_triangle()
+    triangleClassifierCl('abc',4,5).type_of_triangle()
 
 
     
