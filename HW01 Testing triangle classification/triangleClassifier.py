@@ -2,7 +2,7 @@ from polygon import triangle as t
 
 class triangleClassifierCl(t):
     def __init__(self,a,b,c):
-        t.__init__(self,a,b,c)
+        super().__init__(a,b,c)
 
     def is_equilateral (self):
         return self.s1 == self.s2 and self.s2 == self.s3
@@ -27,8 +27,8 @@ class triangleClassifierCl(t):
                 print ("Scalene Triangle")
                 return True
 
-        except ValueError:
-            print("ValueError: All input value needs to be Integer")
+        except TypeError:
+            print("TypeError: All input value needs to be Integer")
 
         return False
 
@@ -38,5 +38,3 @@ if __name__ == '__main__':
     triangleClassifierCl(3,4,5).type_of_triangle()
     triangleClassifierCl('abc',4,5).type_of_triangle()
 
-
-    

@@ -14,7 +14,7 @@ class triangle():
             is_not_number.append(self.s1)
 
         if len(is_not_number)>0:
-            [print(s) for s in is_not_number]
-            raise ValueError()
+            [print(s, type(s)) for s in is_not_number]
+            raise TypeError("Value must be of type int/float")
             
 

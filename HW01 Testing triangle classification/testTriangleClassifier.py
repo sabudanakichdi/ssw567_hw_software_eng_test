@@ -13,6 +13,20 @@ class testTriangleClassifier(u.TestCase):
         self.assertEqual(t.s3,c)
         print("Test init Complete")
 
+    def test_null_args_init(self):
+        print("Start Test null args init")
+        with self.assertRaises(TypeError) as ex:
+            tc()
+        print("Caught Exeception ", str(ex.exception))
+        print("Test null args init Completed")
+
+    def test_two_args_init(self):
+        print("Start Test two args init")
+        with self.assertRaises(TypeError) as ex:
+            tc(1,2)
+        print("Caught Exeception ", str(ex.exception))
+        print("Test two args init Completed")
+
     def test_right_angle(self):
         print("Start Test Right Angle")
         t = tc(3,4,5)
@@ -42,12 +56,12 @@ class testTriangleClassifier(u.TestCase):
         self.assertFalse(tc(1,1,2).type_of_triangle())
         print("Test Scalene Triangle Complete")
         
-    def test_Exception_ValueError(self):
-        print("Start Test Exception Value Error")
+    def test_Exception_TypeError(self):
+        print("Start Test Exception Type Error")
         t = tc("abc",2,3)
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             t.is_triangle()
-        print("Test Exception Value Error Complete")
+        print("Test Exception Type Error Complete")
 
 if __name__ == 'main':
     u.main()
