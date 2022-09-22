@@ -53,3 +53,14 @@
 | testTriangleLengthGreaterThan200 | (201,201,1) |  InvalidInput | InvalidInput | Pass |
 | testTriangeLengthForNegatoveValues | (-1,1,1) |  InvalidInput | InvalidInput | Pass |
 | testTriangleLengthForInputString | ('a',1,1) |  InvalidInput | InvalidInput | Pass |
+
+# Final Report
+
+|  | Test Run 1 | Test Run 2 | Test Run 3 | Test Run 4 | 
+|---|---|---|---|---|
+| Tests Planned | 8 | 8 | 8 | 8 |
+| Tests Executed | 8 | 8 | 8 | 8 |
+| Tests Passed | 2 | 4 | 5 | 8 |
+| Tests Failed | 6 | 4 | 3 | 0 |
+| Defects Found | 2 | 1 | 3 | 0 |
+| Defects Fixed | - | 2 | 1 | 3 |
