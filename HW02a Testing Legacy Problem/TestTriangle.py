@@ -19,19 +19,23 @@ class TestTriangles(unittest.TestCase):
 
     def testRightTriangleA(self): 
         self.assertEqual(classifyTriangle(3,4,5),'Right','3,4,5 is a Right triangle')
+        print('Case passed: 3,4,5 is a Right triangle')
 
     def testRightTriangleB(self): 
         self.assertEqual(classifyTriangle(5,3,4),'Right','5,3,4 is a Right triangle')
+        print('Case passed: 5,3,4 is a Right triangle')
         
     def testEquilateralTriangles(self): 
         self.assertEqual(classifyTriangle(1,1,1),'Equilateral','1,1,1 should be equilateral')
+        print('Case passed: 1,1,1 should be equilateral')
 
     def testIsoscelesTriangleA(self):
         self.assertEqual(classifyTriangle(1,1,2),'Isoceles', '1,1,2 shold be isoceles triangle')
+        print('Case passed: 1,1,2 should be isoceles triangle')
 
     def testScaleneTriangleA(self):
-        self.assertEqual(classifyTriangle(3,1,5), 'Scalene', '3,1,5 shold be scalene triangle')
-        print('Case passed: All input should be numeric')
+        self.assertEqual(classifyTriangle(3,1,5), 'Scalene', '3,1,5 should be scalene triangle')
+        print('Case passed: 3,1,5 shold be scalene triangle')
 
     def testTriangleLengthGreaterThan200(self):
         self.assertEqual(classifyTriangle(201,201,1), 'InvalidInput', '201,201,1 should not be triangle')
