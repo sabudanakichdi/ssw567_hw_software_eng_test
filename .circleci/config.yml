@@ -18,7 +18,7 @@ jobs:
             cd HW02a\ Testing\ Legacy\ Problem/
             pytest --junitxml=test-results/report.xml TestTriangle.py
       - store_test_results:
-          path: test-results
+          path: HW02a\ Testing\ Legacy\ Problem/test-results
 workflows:
   ssw567:
     jobs:
