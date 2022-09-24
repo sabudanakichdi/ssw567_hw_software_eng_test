@@ -11,15 +11,14 @@ jobs:
       - checkout
       - python/install-packages:
           pkg-manager: pip
-          # app-dir: ~/project/package-directory/  # If you're requirements.txt isn't in the root directory.
-          # pip-dependency-file: test-requirements.txt  # if you have a different name for your requirements file, maybe one that combines your runtime and test requirements.
+          args: pytest
       - run:
-          name: Run tests
-          # This assumes pytest is installed via the install-package step above
-          command: pytest
-
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+          name: Run Test
+          command: |
+            cd '.\HW02a Testing Legacy Problem\'
+            pytest --junitxml=test-results/report.xml TestTriangle.py
+      - store_test_results:
+          path: test-results
 workflows:
   ssw567:
     jobs:
