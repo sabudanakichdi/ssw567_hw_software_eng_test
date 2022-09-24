@@ -15,7 +15,7 @@ jobs:
       - run:
           name: Run Test
           command: |
-            cd '.\HW02a Testing Legacy Problem\'
+            cd HW02a\ Testing\ Legacy\ Problem/
             pytest --junitxml=test-results/report.xml TestTriangle.py
       - store_test_results:
           path: test-results
