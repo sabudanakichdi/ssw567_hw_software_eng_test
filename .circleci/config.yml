@@ -30,6 +30,7 @@ jobs:
       - run:
           name: Run Test
           command: |
+            pip install requests
             cd HW04\ Requirements\ Testing/
             pytest --junitxml=../test-results/junit.xml testFetchUserDetailsService.py
       - store_test_results:
