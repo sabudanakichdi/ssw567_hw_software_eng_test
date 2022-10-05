@@ -1,0 +1,7 @@
+GITHUB_URL = "https://api.github.com"
+USERS = "/users"
+REPOS = "/repos"
+PRIVATE_REPO_READ_ACCESS_TOKEN = "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"
+SLASH = "/"
+COMMITS = "/commits"
+USERNAME = "sabudanakichdi"
