@@ -6,3 +6,5 @@
 - HW 02a: Testing Leagacy Problem and Test cases
 - HW 02b: Continuous Integration Classify Triangle
 - HW 03: Decision Table and State Diagram
+- HW 04: Requirements Testing
+- HW 04a: Develop with the Perspective of the Tester in mind - Fetch user and repo details using GitHub API
