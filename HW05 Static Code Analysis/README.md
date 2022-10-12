@@ -83,3 +83,11 @@ Messages
 
 ------------------------------------------------------------------
 Your code has been rated at 8.12/10 (previous run: 0.00/10, +8.12)
+
+# Code Coverage
+|Name            | Stmts  | Miss | Cover | Missing |
+|-|-|-|-|-| 
+|TestTriangle.py  |   31   |  0  | 100% |  |
+|Triangle.py      |    17   |   1  |  94% |  29 |
+|-|-|-|-|-|
+|TOTAL            |    48  |    1  |  98% |
