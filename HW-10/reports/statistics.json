@@ -1,0 +1,50 @@
+{
+  "Steven Apply Page" : {
+    "transaction" : "Steven Apply Page",
+    "sampleCount" : 600,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 13691.400000000003,
+    "medianResTime" : 7581.5,
+    "minResTime" : 67.0,
+    "maxResTime" : 148647.0,
+    "pct1ResTime" : 38398.89999999999,
+    "pct2ResTime" : 59000.64999999999,
+    "pct3ResTime" : 80447.16000000002,
+    "throughput" : 3.996616198285452,
+    "receivedKBytesPerSec" : 468.6858746053341,
+    "sentKBytesPerSec" : 0.4761593517488526
+  },
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 1200,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 10428.934166666691,
+    "medianResTime" : 5088.0,
+    "minResTime" : 67.0,
+    "maxResTime" : 148647.0,
+    "pct1ResTime" : 26278.50000000003,
+    "pct2ResTime" : 46317.45000000003,
+    "pct3ResTime" : 76723.5,
+    "throughput" : 7.9854664510590725,
+    "receivedKBytesPerSec" : 1198.9703219307528,
+    "sentKBytesPerSec" : 0.931897696192929
+  },
+  "Stevens Home Page" : {
+    "transaction" : "Stevens Home Page",
+    "sampleCount" : 600,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 7166.468333333332,
+    "medianResTime" : 3762.0,
+    "minResTime" : 73.0,
+    "maxResTime" : 112678.0,
+    "pct1ResTime" : 16486.1,
+    "pct2ResTime" : 25133.899999999852,
+    "pct3ResTime" : 60508.00000000002,
+    "throughput" : 4.076530057614958,
+    "receivedKBytesPerSec" : 746.0760876904079,
+    "sentKBytesPerSec" : 0.4657754069735841
+  }
+}

@@ -1,0 +1,826 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="UTF-8"/><title>Accessibility Insights for Web FastPass results</title><style>:root {
+  --black: #000;
+  --light-black: #161616;
+  --white: #fff;
+  --brand-blue: #004880;
+  --grey: #333;
+  --ada-brand-color: var(--brand-blue);
+  --primary-text: rgb(0 0 0 / 90%);
+  --secondary-text: rgb(0 0 0 / 70%);
+  --disabled-text: rgb(0 0 0 / 38%);
+  --communication-primary: #106ebe;
+  --communication-tint-40: #eff6fc;
+  --communication-tint-30: #deecf9;
+  --communication-tint-20: #c7e0f4;
+  --communication-tint-10: #2b88d8;
+  --communication-shade-20: #004578;
+  --neutral-0: var(--white);
+  --neutral-2: #f8f8f8;
+  --neutral-3: #f6f6f6;
+  --neutral-4: #f4f4f4;
+  --neutral-6: #f2f2f2;
+  --neutral-6-5: #f1f1f1;
+  --neutral-8: #ebebeb;
+  --neutral-10: #dedede;
+  --neutral-20: #c8c8c8;
+  --neutral-30: #a6a6a6;
+  --neutral-55: #6e6e6e;
+  --neutral-60: #666;
+  --neutral-70: #3c3c3c;
+  --neutral-80: var(--grey);
+  --neutral-100: var(--black);
+  --neutral-alpha-2: rgb(0 0 0 / 2%);
+  --neutral-alpha-4: rgb(0 0 0 / 4%);
+  --neutral-alpha-6: rgb(0 0 0 / 6%);
+  --neutral-alpha-8: rgb(0 0 0 / 8%);
+  --neutral-alpha-10: rgb(0 0 0 / 10%);
+  --neutral-alpha-20: rgb(0 0 0 / 20%);
+  --neutral-alpha-30: rgb(0 0 0 / 30%);
+  --neutral-alpha-60: rgb(0 0 0 / 60%);
+  --neutral-alpha-70: rgb(0 0 0 / 70%);
+  --neutral-alpha-80: rgb(0 0 0 / 80%);
+  --neutral-alpha-90: rgb(0 0 0 / 90%);
+  --positive-outcome: #228722;
+  --negative-outcome: #e81123;
+  --neutral-outcome: var(--neutral-60);
+  --box-shadow-108: rgb(0 0 0 / 10.8%);
+  --box-shadow-132: rgb(0 0 0 / 13.2%);
+  --box-shadow-27: rgb(0 0 0 / 27%);
+  --screenshot-image-outline: #8b8b8b;
+  --card-border: transparent;
+  --card-footer-border: var(--neutral-10);
+  --header-bar-title-color: var(--neutral-0);
+  --help-links-section-background: var(--neutral-4);
+  --help-links-section-border: var(--neutral-4);
+  --index-circle-background: var(--communication-primary);
+  --link-hover: var(--communication-shade-20);
+  --link: var(--communication-primary);
+  --menu-border: var(--neutral-3);
+  --menu-item-background-active: var(--neutral-alpha-8);
+  --menu-item-background-hover: var(--neutral-alpha-4);
+  --left-nav-icon: var(--neutral-55);
+  --pill-background: var(--neutral-alpha-8);
+  --pill: var(--primary-text);
+  --spinner-text: var(--communication-primary);
+  --nav-link-hover: var(--neutral-alpha-8);
+  --nav-link-selected: var(--communication-tint-20);
+  --nav-link-expanded: var(--communication-tint-40);
+  --insights-button-hover: #0179d4;
+  --report-footer-text: #222;
+  --landmark-contentinfo: #00a88c;
+  --landmark-main: #cb2e6d;
+  --landmark-complementary: #6b9d1a;
+  --landmark-banner: #d08311;
+  --landmark-region: #2560e0;
+  --landmark-navigation: #9b38e6;
+  --landmark-search: #d363d8;
+  --landmark-form: #0298c7;
+}
+:root .high-contrast-theme {
+  --ada-brand-color: var(--white);
+  --secondary-text: var(--white);
+  --primary-text: var(--white);
+  --disabled-text: #c285ff;
+  --communication-tint-40: #38a9ff;
+  --communication-tint-30: var(--communication-tint-10);
+  --neutral-0: var(--light-black);
+  --neutral-2: var(--light-black);
+  --neutral-3: var(--light-black);
+  --neutral-4: var(--light-black);
+  --neutral-6: var(--light-black);
+  --neutral-6-5: var(--light-black);
+  --neutral-8: var(--white);
+  --neutral-10: var(--light-black);
+  --neutral-20: var(--white);
+  --neutral-30: var(--white);
+  --neutral-55: var(--white);
+  --neutral-60: var(--white);
+  --neutral-70: var(--white);
+  --neutral-80: var(--white);
+  --neutral-100: var(--white);
+  --neutral-alpha-8: var(--white);
+  --neutral-alpha-90: var(--white);
+  --positive-outcome: #4ac94a;
+  --negative-outcome: #fc7ab1;
+  --neutral-outcome: var(--neutral-0);
+  --card-border: var(--white);
+  --card-footer-border: var(--white);
+  --header-bar-title-color: var(--brand-blue);
+  --help-links-section-background: transparent;
+  --help-links-section-border: var(--white);
+  --index-circle-background: var(--communication-tint-40);
+  --link-hover: #ff0;
+  --link: #ff0;
+  --menu-border: var(--grey);
+  --menu-item-background-active: var(--communication-tint-40);
+  --menu-item-background-hover: var(--grey);
+  --left-nav-icon: var(--black);
+  --pill-background: var(--white);
+  --pill: var(--black);
+  --screenshot-image-outline: var(--white);
+  --spinner-text: var(--communication-tint-40);
+  --nav-link-hover: #2a2a2a;
+  --nav-link-selected: var(--communication-tint-40);
+  --nav-link-expanded: transparent;
+}
+
+.ms-Fabric.is-focusVisible .ms-Nav-group .ms-nav-linkButton:focus::after {
+  border: 1px solid var(--neutral-100);
+}
+@media screen and (forced-colors: active) {
+  .ms-Fabric.is-focusVisible .ms-Nav-group .ms-nav-linkButton:focus::after {
+    border: 1px dashed windowtext !important;
+  }
+}
+
+button::after {
+  content: "";
+  position: absolute;
+}
+
+.ms-fontColor-neutralPrimary,
+.ms-fontColor-neutralPrimary--hover:hover {
+  color: var(--neutral-100) !important;
+}
+
+.ms-Fabric {
+  color: var(--neutral-100);
+}
+
+.insights-link {
+  color: var(--link) !important;
+  text-decoration: none;
+}
+@media screen and (forced-colors: active) {
+  .insights-link {
+    forced-color-adjust: unset;
+  }
+}
+.insights-link:hover {
+  color: var(--link-hover) !important;
+  text-decoration: underline;
+}
+
+.high-contrast-theme .insights-link:hover {
+  text-decoration: underline;
+}
+.high-contrast-theme .is-selected .status-icon {
+  color: var(--black) !important;
+}
+
+.insights-code {
+  font-family: menlo, consolas, courier new, monospace;
+}
+
+.ms-Spinner .ms-Spinner-circle {
+  border-top-color: var(--spinner-text);
+}
+.ms-Spinner .ms-Spinner-label {
+  color: var(--spinner-text);
+}
+
+.guidance-tags span {
+  font-size: 12px;
+  font-weight: normal;
+  padding-top: 2px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  padding-left: 12px;
+  color: var(--pill);
+  background-color: var(--pill-background);
+  border-radius: 120px;
+}
+
+.hidden-highlight-button {
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.instance-details-card {
+  border-radius: 4px;
+  border: 1px solid var(--card-border);
+  outline-style: "border-style";
+  box-shadow: 0 0.6px 1.8px var(--box-shadow-108), 0 3.2px 7.2px var(--box-shadow-132);
+  margin-bottom: 16px;
+  width: -moz-available;
+  /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
+}
+
+.instance-details-card-container.selected {
+  outline: 5px solid var(--communication-tint-10);
+}
+
+.instance-details-card.selected {
+  border: 1px solid transparent;
+}
+
+.instance-details-card.focused,
+.instance-details-card:focus {
+  outline: 2px solid var(--primary-text);
+  outline-offset: 2px;
+}
+
+.instance-details-card.selected.focused,
+.instance-details-card.selected:focus {
+  outline-offset: 8px;
+}
+
+.instance-details-card.interactive {
+  cursor: pointer;
+}
+
+.instance-details-card.interactive:hover {
+  box-shadow: 0 8px 10px var(--box-shadow-108), 0 8px 10px var(--box-shadow-132);
+}
+
+.report-instance-table {
+  background: var(--neutral-0);
+  display: table;
+  table-layout: fixed;
+  width: -moz-available;
+  /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
+  border-radius: inherit;
+  border-collapse: collapse;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.report-instance-table .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2px;
+  padding-bottom: 14px;
+  padding-left: 0;
+  padding-right: 20px;
+  border-bottom: 0.5px solid var(--neutral-10);
+}
+.report-instance-table .row > * {
+  margin-top: 12px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  margin-right: 0;
+  padding: 0;
+}
+.report-instance-table .row:last-child {
+  border-bottom: none;
+}
+.report-instance-table .row-label {
+  flex-basis: 90px;
+  flex-shrink: 1;
+  flex-grow: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--primary-text);
+  text-align: left;
+}
+.report-instance-table .row-content {
+  flex-basis: 200px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  color: var(--secondary-text);
+  font-size: 14px;
+  line-height: 20px;
+  align-items: flex-end;
+  display: flex;
+}
+
+.outcome-summary-bar {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 0;
+  line-height: 24px;
+  font-size: 17px;
+  font-weight: 600;
+  white-space: pre-wrap;
+}
+.outcome-summary-bar .block,
+.outcome-summary-bar .incomplete,
+.outcome-summary-bar .inapplicable,
+.outcome-summary-bar .unscannable,
+.outcome-summary-bar .pass,
+.outcome-summary-bar .fail {
+  font-family: 'Segoe UI Web (West European)','Segoe UI','-apple-system',BlinkMacSystemFont,Roboto,'Helvetica Neue',Helvetica,Ubuntu,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  line-height: 20px;
+  font-size: 16px;
+  color: var(--neutral-0);
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
+}
+.outcome-summary-bar .count {
+  font-weight: 600;
+}
+.outcome-summary-bar .fail {
+  background-color: var(--negative-outcome);
+}
+.outcome-summary-bar .fail .check-container {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 0 solid var(--neutral-0);
+}
+.outcome-summary-bar .fail .check-container svg circle {
+  fill: var(--negative-outcome);
+}
+.outcome-summary-bar .fail .check-container {
+  bottom: -1px;
+  margin-right: 8px;
+}
+.outcome-summary-bar .pass {
+  background-color: var(--positive-outcome);
+}
+.outcome-summary-bar .pass .check-container {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 0 solid var(--neutral-0);
+}
+.outcome-summary-bar .pass .check-container svg circle {
+  fill: var(--positive-outcome);
+}
+.outcome-summary-bar .pass .check-container {
+  bottom: -1px;
+  margin-right: 8px;
+  margin-left: 4px;
+}
+.outcome-summary-bar .inapplicable,
+.outcome-summary-bar .unscannable {
+  background-color: var(--neutral-outcome);
+}
+.outcome-summary-bar .inapplicable .check-container,
+.outcome-summary-bar .unscannable .check-container {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 0 solid var(--neutral-0);
+}
+.outcome-summary-bar .inapplicable .check-container,
+.outcome-summary-bar .unscannable .check-container {
+  bottom: -1px;
+  margin-right: 8px;
+  margin-left: 4px;
+}
+.outcome-summary-bar .incomplete {
+  background-color: var(--neutral-outcome);
+  color: var(--white);
+  border: 2px var(--neutral-60) solid;
+  height: 12px;
+}
+.outcome-summary-bar .incomplete .check-container {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 3px solid var(--neutral-0);
+}
+.outcome-summary-bar .incomplete .check-container {
+  margin-right: 6px;
+  border-color: var(--white);
+}
+.outcome-summary-bar .summary-bar-left-edge {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.outcome-summary-bar .summary-bar-right-edge {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  margin-right: 0;
+}
+.outcome-summary-bar .label {
+  font-weight: normal;
+}
+
+.screen-reader-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(100% 100% 100% 100%);
+}
+
+.check-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+.outcome-chip {
+  height: 16px;
+  color: var(--primary-text);
+  border-radius: 0 8px 8px 0;
+  margin-right: 4px;
+  margin-bottom: -3px;
+  margin-left: 4px;
+  display: inline-flex;
+  align-items: center;
+}
+.outcome-chip .icon {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+}
+.outcome-chip .count {
+  font-family: 'Segoe UI Web (West European)','Segoe UI','-apple-system',BlinkMacSystemFont,Roboto,'Helvetica Neue',Helvetica,Ubuntu,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  line-height: 13px;
+  font-size: 11px;
+  border-radius: 0 8px 8px 0;
+  padding-right: 6px;
+  padding-left: 10px;
+  font-weight: 700;
+  margin-left: -8px;
+  height: 13px;
+}
+@media screen and (forced-colors: active) {
+  .outcome-chip .count {
+    forced-color-adjust: none;
+    border-color: canvastext !important;
+    color: canvastext;
+  }
+}
+.outcome-chip.outcome-chip-pass .check-container {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 0 solid var(--neutral-0);
+}
+.outcome-chip.outcome-chip-pass .check-container svg circle {
+  fill: var(--positive-outcome);
+}
+.outcome-chip.outcome-chip-pass .check-container {
+  background-color: var(--positive-outcome);
+}
+.outcome-chip.outcome-chip-pass .count {
+  background-color: transparent;
+  border: 1.5px solid var(--positive-outcome);
+}
+.outcome-chip.outcome-chip-incomplete .check-container, .outcome-chip.outcome-chip-review .check-container {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid var(--neutral-0);
+}
+.outcome-chip.outcome-chip-incomplete .check-container, .outcome-chip.outcome-chip-review .check-container {
+  background-color: var(--neutral-60);
+}
+.outcome-chip.outcome-chip-incomplete .count, .outcome-chip.outcome-chip-review .count {
+  background-color: transparent;
+  border: 1.5px solid var(--neutral-60);
+}
+.outcome-chip.outcome-chip-fail .check-container {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 0 solid var(--neutral-0);
+}
+.outcome-chip.outcome-chip-fail .check-container svg circle {
+  fill: var(--negative-outcome);
+}
+.outcome-chip.outcome-chip-fail .check-container {
+  background-color: var(--negative-outcome);
+}
+.outcome-chip.outcome-chip-fail .count {
+  background-color: transparent;
+  border: 1.5px solid var(--negative-outcome);
+}
+.outcome-chip.outcome-chip-inapplicable .check-container, .outcome-chip.outcome-chip-unscannable .check-container {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 0 solid var(--neutral-0);
+}
+.outcome-chip.outcome-chip-inapplicable .check-container, .outcome-chip.outcome-chip-unscannable .check-container {
+  background-color: var(--neutral-outcome);
+}
+.outcome-chip.outcome-chip-inapplicable .count, .outcome-chip.outcome-chip-unscannable .count {
+  background-color: transparent;
+  border: 1.5px solid var(--neutral-outcome);
+}
+
+.outcome-icon-set .outcome-icon {
+  margin-left: 4px;
+  border-radius: 50%;
+}
+.outcome-icon-set .outcome-icon-pass .check-container {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 0 solid var(--neutral-0);
+}
+.outcome-icon-set .outcome-icon-pass .check-container svg circle {
+  fill: var(--positive-outcome);
+}
+.outcome-icon-set .outcome-icon-incomplete .check-container {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid var(--neutral-0);
+}
+.outcome-icon-set .outcome-icon-incomplete .check-container {
+  border-color: var(--neutral-60);
+}
+.outcome-icon-set .outcome-icon-fail .check-container {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 0 solid var(--neutral-0);
+}
+.outcome-icon-set .outcome-icon-fail .check-container svg circle {
+  fill: var(--negative-outcome);
+}
+
+body {
+  font-size: 14px;
+  margin: auto;
+  background-color: var(--neutral-2);
+  color: black;
+  font-family: 'Segoe UI Web (West European)','Segoe UI','-apple-system',BlinkMacSystemFont,Roboto,'Helvetica Neue',Helvetica,Ubuntu,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+}
+
+.outer-container {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+}
+.outer-container .content-container {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 24px;
+}
+.outer-container .content-container h2 {
+  margin: 0;
+  font-size: 17px;
+  line-height: 24px;
+}
+@media only screen and (max-width: 1000px) {
+  .outer-container .content-container {
+    margin-top: 24px;
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+}
+
+.scan-details-section {
+  box-shadow: 0 0.3px 0.9px rgba(0, 0, 0, 0.108), 0 1.6px 3.6px rgba(0, 0, 0, 0.132);
+  border-radius: 4px;
+  background-color: var(--neutral-0);
+  padding: 20px;
+  margin-bottom: 22px;
+}
+.scan-details-section .details-section-list {
+  list-style: none;
+  font-size: 14px;
+  line-height: 16px;
+  padding-left: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.scan-details-section h3 {
+  margin: 0;
+  font-size: 17px;
+  line-height: 24px;
+}
+.scan-details-section li {
+  display: inline-block;
+  padding-top: 12px;
+}
+.scan-details-section li .icon {
+  padding-right: 12px;
+  position: relative;
+  top: 3px;
+}
+.scan-details-section .text {
+  word-break: break-all;
+}
+.scan-details-section .description-text {
+  white-space: pre-wrap;
+}
+.scan-details-section .screen-reader-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(100% 100% 100% 100%);
+}
+
+.report-footer-container {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 68px;
+  margin-top: 24px;
+}
+.report-footer-container .report-footer {
+  line-height: 20px;
+  color: var(--report-footer-text);
+}
+@media only screen and (max-width: 1000px) {
+  .report-footer-container {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+}
+
+.report-header-command-bar {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  min-height: fit-content;
+  align-items: center;
+  background-color: var(--neutral-0);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+}
+.report-header-command-bar .target-page {
+  white-space: nowrap;
+  margin-left: 16px;
+  display: flex;
+  color: var(--primary-text);
+  font-family: 'Segoe UI Web (West European)','Segoe UI','-apple-system',BlinkMacSystemFont,Roboto,'Helvetica Neue',Helvetica,Ubuntu,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  min-width: 0;
+}
+.report-header-command-bar .target-page a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.report-congrats-message {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.report-congrats-head {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-text);
+  padding-top: 10px;
+  padding-right: 0;
+  padding-bottom: 10px;
+  padding-left: 0;
+}
+
+.report-congrats-info {
+  font-size: 14px;
+  color: var(--secondary-text);
+  padding-top: 10px;
+  padding-right: 0;
+  padding-bottom: 10px;
+  padding-left: 0;
+}
+
+.sleeping-ada {
+  height: 100px;
+}
+
+.title-section {
+  margin-top: 56px;
+}
+.title-section h1 {
+  font-weight: 600;
+  margin-bottom: 24px;
+  font-size: 21px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+}
+
+.results-container {
+  margin-top: 56px;
+}
+.results-container .title-container :is(h1, h2, h3, h4, h5, h6) {
+  font-weight: unset;
+  margin-block: 0;
+  margin-inline: 0;
+}
+
+@media screen and (max-width: 640px) {
+  .outcome-past-tense {
+    display: none;
+  }
+}
+.collapsible-container .collapsible-control[aria-expanded=true]::before, .collapsible-container .collapsible-control[aria-expanded=false]::before {
+  display: inline-block;
+  border-right: 1px solid var(--secondary-text);
+  border-bottom: 1px solid var(--secondary-text);
+  min-width: 7px;
+  width: 7px;
+  height: 7px;
+  content: "";
+  transform-origin: 50% 50%;
+  transition: transform 0.1s linear 0s;
+}
+
+.summary-section {
+  box-shadow: 0 0.3px 0.9px rgba(0, 0, 0, 0.108), 0 1.6px 3.6px rgba(0, 0, 0, 0.132);
+  border-radius: 4px;
+  background-color: var(--neutral-0);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.result-section {
+  padding-bottom: 24px;
+}
+.result-section .title-container .collapsible-control::before {
+  position: relative;
+  bottom: 2px;
+  margin-right: 14px;
+}
+.result-section .collapsible-content {
+  margin-left: 16px;
+}
+
+.collapsible-container .collapsible-control {
+  font-family: "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+}
+.collapsible-container .collapsible-control:hover {
+  background-color: var(--neutral-alpha-4);
+}
+.collapsible-container:not(.collapsible-rule-details-group) .collapsible-control {
+  padding-left: 2px;
+  padding-right: 16px;
+  position: relative;
+}
+.collapsible-container .collapsible-control[aria-expanded=false]::before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.collapsible-container .collapsible-control[aria-expanded=true]::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.collapsible-container .collapsible-content[aria-hidden=true] {
+  display: none;
+}
+
+ul.instance-details-list {
+  list-style-type: none;
+  padding-inline-start: unset;
+  margin-block-start: unset;
+  margin-block-end: unset;
+}
+ul.instance-details-list li {
+  margin-bottom: 16px;
+}
+ul.instance-details-list li:last-child {
+  margin-bottom: unset;
+}</style><style>.no-failure-view--X37Kx{font-size:15px;font-weight:400;padding:15px}.assessment-instance-label--gMLtF{width:24px;font-size:14px;height:24px;text-align:center;float:left;margin-right:8px;line-height:24px;color:var(--white)}.assessment-instance-label--gMLtF.radio{width:14px;height:14px;border-radius:50%;margin-top:6px}.assessment-instance-label--gMLtF.not-applicable{font-size:10px}.all-content--F4o2F{display:flex;flex-direction:row;vertical-align:center;font-size:14px;line-height:24px}.instance-header--UjKG9{color:var(--primary-text);white-space:pre}@media screen and (forced-colors: active){.instance-header--UjKG9{color:inherit}}.assessment-instance-textContent--qzfyY{overflow:hidden;white-space:normal;text-overflow:ellipsis;color:var(--secondary-text)}@media screen and (forced-colors: active){.assessment-instance-textContent--qzfyY{color:inherit}}.expand-collapse-all-button--3rBtD{display:flex;padding:unset;padding-right:27px;margin-left:-2px;margin-top:2px}.visual-helper-toggle--pqmC6{display:flex;align-items:center;word-wrap:break-word;margin:unset}.visual-helper-toggle--pqmC6 label{font-family:"Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;font-weight:400;font-size:14px;line-height:20px;margin-right:8px}.cards-visualization-modifiers-container--JD-Mt{display:flex;flex-wrap:wrap}.heading-element-for-level--ifVX6{margin-block-start:unset;margin-block-end:unset}.left-nav-link-container--PKncK{margin-left:10px;color:var(--primary-text);display:flex;flex-wrap:nowrap;justify-content:flex-start;min-height:44px;align-items:center}.is-selected .left-nav-link-container--PKncK{color:var(--light-black)}.left-nav-link-container--PKncK .link-icon--l1jgX{font-size:24px}.index-circle--UxApC{display:inline-block;border-radius:50%;border:1px solid var(--neutral-20);width:1.5em;line-height:1.5em;padding:.07em;margin-top:.23em;color:var(--secondary-text);background:var(--neutral-0);text-align:center}li .is-expanded .index-circle--UxApC,.ms-Nav-compositeLink.is-selected .index-circle--UxApC{color:var(--neutral-0);background:var(--index-circle-background);border-color:var(--neutral-0)}.requirement-status-icon--5eCA-{font-size:20px}.test-name--T6ba5{padding-left:20px;display:inline-block;white-space:pre-wrap;line-height:20px}.requirement-detail--A9HmV{font-size:14px;padding:16px 8px;display:flex;align-items:baseline;text-align:left}.requirement-detail--A9HmV strong{font-weight:600}.requirement-detail--A9HmV .outcome-chip{vertical-align:middle;margin-bottom:2px}.requirement-detail-description--LIhWd{font-family:"Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;font-weight:400;font-size:14px;line-height:20px;word-break:break-all}.requirement-details-id--tFytl{font-weight:600;color:var(--primary-text);word-break:break-all}.requirement-details-id--tFytl a{font-weight:600;color:var(--primary-text)}.outcome-chip-container--hHuUe{min-width:50px}.choice-group-container--5SzTv{display:flex}.secondary-controls-wrapper--pUCeO{margin-left:4px}@media screen and (forced-colors: active){.ms-DetailsRow .secondary-controls-wrapper--pUCeO button{color:buttontext;background-color:canvas}.ms-DetailsRow .secondary-controls-wrapper--pUCeO button:hover{color:highlight;background-color:canvas}}.radio-button-group--w7ZAq{column-gap:8px;display:flex;flex-direction:row;align-items:center;min-height:32px}.radio-button-option--xvPFh{margin-top:0}.radio-button-option--xvPFh .radio-button-option-field--Nk--O{min-width:20px}.radio-button-option--xvPFh .radio-button-option-pass--HpvMz.is-checked:before,.radio-button-option--xvPFh .radio-button-option-pass--HpvMz.is-checked:after{border-color:var(--positive-outcome)}.radio-button-option--xvPFh .radio-button-option-fail--9vbVp.is-checked:before,.radio-button-option--xvPFh .radio-button-option-fail--9vbVp.is-checked:after{border-color:var(--negative-outcome)}@media screen and (forced-colors: active){.ms-DetailsRow .radio-button-option--xvPFh .radio-button-option-field--Nk--O:before{background-color:canvas;border-color:buttontext}.radio-button-option--xvPFh .radio-button-option-field--Nk--O.is-checked:before,.radio-button-option--xvPFh .radio-button-option-field--Nk--O.is-checked:after,.radio-button-option--xvPFh .radio-button-option-field--Nk--O:hover:before,.radio-button-option--xvPFh .radio-button-option-field--Nk--O:hover:after{forced-color-adjust:none;border-color:highlight!important}.radio-button-option--xvPFh .radio-button-option-field--Nk--O.is-checked:before,.radio-button-option--xvPFh .radio-button-option-field--Nk--O:hover:before{background-color:highlighttext}.radio-button-option--xvPFh .radio-button-option-field--Nk--O.is-checked:after,.radio-button-option--xvPFh .radio-button-option-field--Nk--O:hover:after{background-color:highlight}}.requirement-column--4Ii53{font-size:14px;color:var(--primary-text);white-space:normal}@media screen and (forced-colors: active){.requirement-column--4Ii53{color:inherit}}.pass-fail-column-cell--O-JFD{display:flex;align-items:center;min-height:47px}.requirement-name--Gl1fk{font-weight:600}.requirement-table--cJAxX>div[role=grid]{padding-bottom:20px}.edit-button--ssAtN{margin-left:4px;margin-right:10px;padding-left:3px;padding-right:3px;font-size:16px!important;line-height:24px!important;color:var(--neutral-100)!important}.edit-button--ssAtN:hover,.edit-button--ssAtN:focus{color:linktext!important}@media screen and (forced-colors: active){.edit-button--ssAtN{color:inherit!important}}@media screen and (forced-colors: active) and (forced-colors: active){.edit-button--ssAtN{forced-color-adjust:unset}}@media screen and (forced-colors: active){.edit-button--ssAtN:hover,.edit-button--ssAtN:focus{color:initial!important}}.remove-button--7aB3w{font-size:16px;line-height:24px;color:var(--negative-outcome)!important}.remove-button--7aB3w:hover,.remove-button--7aB3w:focus{color:linktext!important}@media screen and (forced-colors: active){.remove-button--7aB3w{color:inherit!important}}@media screen and (forced-colors: active) and (forced-colors: active){.remove-button--7aB3w{forced-color-adjust:unset}}@media screen and (forced-colors: active){.remove-button--7aB3w:hover,.remove-button--7aB3w:focus{color:initial!important}}.collapsible-requirement-details-group--A40l5{box-shadow:0 1px #00000014}.collapsible-requirement-details-group--A40l5 .no-instances--hnZaA{font-style:italic;padding-left:20px}.collapsible-requirement-details-group--A40l5:not(.collapsed){box-shadow:unset}.instance-list--hveoz th{color:var(--primary-text);padding-top:14px;padding-bottom:14px;padding-left:20px}.header-bar--11Oyo{display:flex;flex-wrap:nowrap;justify-content:flex-start;align-items:center;align-content:stretch;background-color:var(--ada-brand-color);min-height:40px;width:100%}.header-bar--11Oyo .header-icon{margin-left:16px;height:22px;width:22px;flex-shrink:0}.header-bar--11Oyo .header-title--uc-c9{margin-right:32px;margin-left:8px;color:var(--header-bar-title-color);font-size:16px;font-family:"Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.header-bar--11Oyo .spacer--TSsDE{flex:1 1 auto}.header-bar--11Oyo .far-items--PJa8J{display:flex;justify-content:flex-end;align-items:center;margin-right:12px}.header-bar--11Oyo .far-items--PJa8J button,.header-bar--11Oyo .far-items--PJa8J button:focus,.header-bar--11Oyo .far-items--PJa8J button:hover,.header-bar--11Oyo .far-items--PJa8J button:active,.header-bar--11Oyo .far-items--PJa8J button:hover:active{background-color:unset}.header-bar--11Oyo .far-items--PJa8J i{font-size:20px;color:var(--neutral-0)}.no-content-available--AkB77{margin-left:24px;margin-right:24px}.assessment-report-summary--grvEl{margin-bottom:40px;display:flex;flex-direction:column;width:100%}.assessment-report-summary--grvEl>h2{font-family:"Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;font-size:21px;line-height:32px;font-weight:600;letter-spacing:-.02em;color:var(--primary-text);margin:0}.assessment-report-summary--grvEl .test-details-text--47PEJ{font-weight:600;font-size:17px;line-height:24px;color:var(--primary-text);font-family:"Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;margin-top:16px;margin-bottom:21px}.assessment-summary-details--arc8Q{display:flex}.assessment-summary-details--arc8Q .assessment-summary-details-body--qsVeE{column-count:2;column-gap:4%;display:block;width:100%;align-items:start}@media screen and (max-width: 900px){.assessment-summary-details--arc8Q .assessment-summary-details-body--qsVeE{column-count:1}}.assessment-summary-details--arc8Q .assessment-summary-details-body--qsVeE .assessment-summary-details-row--oLVSA{display:inline-block;width:100%}.assessment-summary-details--arc8Q .assessment-summary-details-body--qsVeE .assessment-summary-details-row--oLVSA .test-summary--8yOic{display:flex;width:98%;padding:12px 10px;justify-content:space-between;border-bottom:var(--neutral-alpha-8) solid 1px}.assessment-summary-details--arc8Q .assessment-summary-details-body--qsVeE .assessment-summary-details-row--oLVSA .test-summary-status--8hl4z{display:flex;align-items:center;white-space:nowrap}.assessment-summary-details--arc8Q .assessment-summary-details-body--qsVeE .assessment-summary-details-row--oLVSA .test-summary-display-name--f1XR-{font-size:14px;line-height:20px;white-space:nowrap;font-weight:600}.report-header-bar--SDV11{display:flex;justify-content:flex-start;align-items:center;flex-wrap:nowrap;background-color:var(--ada-brand-color);height:40px;width:100%}.report-header-bar--SDV11 .header-icon{flex-shrink:0;margin-left:16px;height:22px;width:22px}.report-header-bar--SDV11 .header-text--EdTxw{margin-left:8px;color:var(--header-bar-title-color);flex-shrink:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:"Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;font-weight:400;font-size:17px;line-height:24px}.report-header-command-bar--NJWdl{height:40px;width:100%;display:flex;justify-content:end;min-height:fit-content;align-items:center;background-color:var(--neutral-0);box-shadow:0 1px #00000014}.report-header-command-bar--NJWdl .target-page--hjh44{white-space:nowrap;margin-left:16px;display:flex;color:var(--primary-text);font-family:"Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;font-size:14px;line-height:20px;font-weight:400;min-width:0}.report-header-command-bar--NJWdl .target-page--hjh44 a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.result-section-title--RGFI5{display:flex;flex-wrap:nowrap;justify-content:flex-start;align-items:center;margin-top:8px;margin-bottom:8px}.result-section-title--RGFI5 .outcome-chip.outcome-chip-fail .count{line-height:11px}.result-section-title--RGFI5 .outcome-chip.outcome-chip-fail svg{margin-bottom:3px}.result-section-title--RGFI5 .title--WBYFE{font-weight:600;font-size:17px;line-height:24px;margin-right:6px;color:var(--primary-text)}.result-section-title--RGFI5 .heading--NdP4Q{font-weight:600;font-size:15px;line-height:20px;margin-right:6px;color:var(--primary-text)}.result-section-title--RGFI5 .outcome-chip-container--BT3j5{display:flex;height:16px}.tab-stops-failure-instance-section--PhQjL{padding-bottom:24px}.tab-stops-failure-instance-section--PhQjL .title-container--bvoQk .collapsible-control--UVHg4:before{position:relative;bottom:2px}.tab-stops-failure-instance-section--PhQjL>h2{margin:0;font-size:17px;line-height:24px}.failed-instances-container--3UUNb .collapsible-content{margin-left:24px}.outcome-chip-container--G5Dfr{min-width:50px}.hidden-highlight-button--vu3B3{opacity:0;margin:0;padding:0;border:none}.instance-details-card--owGQF{border-radius:4px;border:1px solid var(--card-border);outline-style:"border-style";box-shadow:0 .6px 1.8px var(--box-shadow-108),0 3.2px 7.2px var(--box-shadow-132);margin-bottom:16px;width:-moz-available;width:-webkit-fill-available;width:fill-available}.instance-details-card-container--KLHTp.selected--wEA4l{outline:5px solid var(--communication-tint-10)}.instance-details-card--owGQF.selected--wEA4l{border:1px solid transparent}.instance-details-card--owGQF.focused--pvBWq,.instance-details-card--owGQF:focus{outline:2px solid var(--primary-text);outline-offset:2px}.instance-details-card--owGQF.selected--wEA4l.focused--pvBWq,.instance-details-card--owGQF.selected--wEA4l:focus{outline-offset:8px}.instance-details-card--owGQF.interactive--an0ab{cursor:pointer}.instance-details-card--owGQF.interactive--an0ab:hover{box-shadow:0 8px 10px var(--box-shadow-108),0 8px 10px var(--box-shadow-132)}.report-instance-table--3VoZX{background:var(--neutral-0);display:table;table-layout:fixed;width:-moz-available;width:-webkit-fill-available;width:fill-available;border-radius:inherit;border-collapse:collapse;overflow-wrap:break-word;word-break:break-word}.report-instance-table--3VoZX .row---3i35{display:flex;flex-wrap:wrap;padding:2px 20px 14px 0;border-bottom:.5px solid var(--neutral-10)}.report-instance-table--3VoZX .row---3i35>*{margin:12px 0 0 20px;padding:0}.report-instance-table--3VoZX .row---3i35:last-child{border-bottom:none}.report-instance-table--3VoZX .row-label--FlVZl{flex-basis:90px;flex-shrink:1;flex-grow:0;font-size:14px;line-height:20px;font-weight:600;color:var(--primary-text);text-align:left}.report-instance-table--3VoZX .row-content--07KUh{flex-basis:200px;flex-shrink:1;flex-grow:1;color:var(--secondary-text);font-size:14px;line-height:20px;align-items:flex-end;display:flex}.multi-line-text-yes-bullet--TXyX-{padding-left:16px}.multi-line-text-yes-bullet--TXyX- li{list-style-type:disc;margin-bottom:4px}.multi-line-text-no-bullet--AUXXt{padding-left:0;list-style:none}.multi-line-text-no-bullet--AUXXt li:not(:last-child){margin-bottom:4px}.combination-lists--boK5y{flex-direction:column;display:flex}.urls-row-content--JDdRx{padding-left:16px}.urls-row-content--JDdRx li{list-style-type:disc;margin-bottom:4px}.urls-row-content-new-Failure--oL5lS{color:var(--negative-outcome);font-weight:700}.how-to-fix-content--Zz96u{margin-bottom:16px}.how-to-fix-content--Zz96u ul{padding-left:16px}.how-to-fix-content--Zz96u ul li{list-style-type:disc;margin-bottom:4px}.snippet--hSNfv{font-family:menlo,consolas,courier new,monospace;white-space:normal}.toast-container--L-5HM{display:inline-block}.toast-content--8-Mx1{background:var(--neutral-70);border-radius:4px;color:var(--neutral-0);padding:14px 20px;width:316px;margin-left:-178px;left:50%;bottom:20px;z-index:1000;position:absolute}.kebab-menu-icon--EUIj-{flex-grow:1}@media screen and (forced-colors: active){.kebab-menu-icon--EUIj-{color:buttontext}}.kebab-menu-button--9Qt0a{margin-right:8px;width:32px;height:32px}.kebab-menu-button--9Qt0a:hover{background-color:var(--menu-item-background-hover)}.kebab-menu-button--9Qt0a.is-expanded{background-color:var(--menu-item-background-active)}@media screen and (forced-colors: active){.kebab-menu-button--9Qt0a.is-expanded .kebab-menu-icon--EUIj-,.kebab-menu-button--9Qt0a:hover .kebab-menu-icon--EUIj-{color:highlight}}@media screen and (forced-colors: active){.kebab-menu--7coPg button:hover{color:highlight}}.foot--p1DfC{display:flex;justify-content:space-between;align-items:center;background-color:var(--neutral-2);min-height:48px;padding-left:12px;border-top:.5px solid var(--card-footer-border);border-bottom-left-radius:inherit;border-bottom-right-radius:inherit}.foot--p1DfC .highlight-status--xJvvI{display:flex;justify-content:space-between;align-items:center;background:transparent}.foot--p1DfC .highlight-status--xJvvI svg{fill:var(--secondary-text)}@media screen and (forced-colors: active){.foot--p1DfC .highlight-status--xJvvI svg{fill:ButtonFace!important;stroke:ButtonText!important}}.foot--p1DfC .highlight-status--xJvvI label{color:var(--secondary-text);font-size:14px;overflow-wrap:break-word;word-break:break-word}ul.instance-details-list--YfkRy{list-style-type:none;padding-inline-start:unset;margin-block-start:unset;margin-block-end:unset}ul.instance-details-list--YfkRy>li{margin-bottom:16px}ul.instance-details-list--YfkRy>li:last-child{margin-bottom:unset}.rule-more-resources--uw9mc{display:flex;flex-direction:column;margin-bottom:16px;padding:14px 20px;background-color:var(--neutral-0);box-shadow:0 .3px .9px #0000001c,0 1.6px 3.6px #0002;border-radius:4px;border:1px solid var(--card-border);line-height:20px;overflow-wrap:break-word;word-break:break-word}.rule-more-resources--uw9mc .more-resources-title--jOuUL{font-weight:600}.rule-more-resources--uw9mc .rule-details-id--s-TpO{padding-top:12px;padding-bottom:12px}.rule-more-resources--uw9mc .rule-guidance--TIQgm>:not(span:first-of-type){margin-left:8px}.rule-details-group--Tb-LW .rule-detail{font-size:14px;padding:16px 8px;display:flex;align-items:baseline;text-align:left}.rule-details-group--Tb-LW .rule-detail .outcome-chip{vertical-align:middle;margin-bottom:2px}.rule-details-group--Tb-LW .rule-detail .rule-details-id{font-weight:600;color:var(--primary-text);word-break:break-all}.rule-details-group--Tb-LW .rule-detail .rule-details-id a{font-weight:600;color:var(--primary-text)!important}.rule-details-group--Tb-LW .rule-detail .rule-details-id strong{font-weight:600}.rule-details-group--Tb-LW .rule-detail .rule-detail-description{color:var(--secondary-text)!important;word-break:break-all}.collapsible-rule-details-group--V-HWh{box-shadow:0 1px #00000014}.collapsible-rule-details-group--V-HWh .rule-detail{box-shadow:unset}.collapsible-rule-details-group--V-HWh:not(.collapsed){box-shadow:unset}.result-section--HfO9s{padding-bottom:24px}.result-section--HfO9s .title-container--JzN4A .collapsible-control--e42Z7:before{position:relative;bottom:2px}.result-section--HfO9s>h2{margin:0;font-size:17px;line-height:24px}.collapsible-container--QD-3d .collapsible-control--Q0Wlq[aria-expanded=true]:before,.collapsible-container--QD-3d .collapsible-control--Q0Wlq[aria-expanded=false]:before{display:inline-block;border-right:1px solid var(--secondary-text);border-bottom:1px solid var(--secondary-text);min-width:7px;width:7px;height:7px;content:"";transform-origin:50% 50%;transition:transform .1s linear 0s}.collapsible-container--QD-3d .collapsible-control--Q0Wlq{font-family:"Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;background-color:transparent;cursor:pointer;border:none;display:flex;align-items:baseline;width:100%;height:fit-content}.collapsible-container--QD-3d .collapsible-control--Q0Wlq:hover{background-color:var(--neutral-alpha-4);color:var(--primary-text)}.collapsible-container--QD-3d .collapsible-control--Q0Wlq[aria-expanded=false]:before{-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg)}.collapsible-container--QD-3d .collapsible-control--Q0Wlq[aria-expanded=true]:before{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}.collapsible-container--QD-3d .collapsible-container-content--qeM4P{margin-left:24px}.collapsible-container--QD-3d .collapsible-container-content--qeM4P[aria-hidden=true]{display:none}.collapsible-title--wdkYZ{padding-left:.5vw}.fix-instruction-color-box--DQpQE{width:14px;height:14px;display:inline-block;vertical-align:-5%;margin-right:2px;margin-left:2px;border:1px solid var(--light-black)}@media screen and (forced-colors: active){.fix-instruction-color-box--DQpQE{forced-color-adjust:none}}.screen-reader-only--6LUiO{position:absolute;left:-10000px;top:auto;height:1px;overflow:hidden;clip-path:inset(100% 100% 100% 100%)}.generic-toggle-component--QDn1m{margin-bottom:4vh}.generic-toggle-component--QDn1m .toggle-container--N5sJJ{display:flex;justify-content:space-between;margin-bottom:1vh}.generic-toggle-component--QDn1m .toggle-container--N5sJJ .toggle-name--Q9yh2{font-weight:600;font-size:17px;line-height:24px}.generic-toggle-component--QDn1m .toggle-container--N5sJJ .toggle--983Do{margin-left:12px;margin-top:3px;margin-bottom:unset}.generic-toggle-component--QDn1m .toggle-description--ieTgg{color:var(--primary-text)}.change-assessment-dialog-modal--wvGCI .ms-Overlay{background-color:var(--neutral-alpha-60)}.change-assessment-dialog--6rXKH{border-radius:6px;box-shadow:0 0 10px 0 var(--neutral-alpha-60)}.change-assessment-dialog--6rXKH .ms-Dialog-title{font-weight:600}.change-assessment-dialog--6rXKH .change-assessment-dialog-button-container--akgQr{display:flex;flex-wrap:wrap;justify-content:flex-end}.change-assessment-dialog--6rXKH .change-assessment-dialog-button-container--akgQr .action-cancel-button-col---ILlC{text-align:right;padding-left:0;margin-top:4px}.change-assessment-dialog--6rXKH .change-assessment-dialog-button-container--akgQr .action-cancel-button-col---ILlC+.action-cancel-button-col---ILlC{margin-left:8px}.change-assessment-dialog--6rXKH .change-assessment-dialog-button-container--akgQr button{padding:0;height:32px}.change-assessment-dialog--6rXKH .change-assessment-dialog-button-container--akgQr .continue-button--Iui0u button{width:140px}div.insights-dialog-main-override--ma4DA{width:75%;max-width:500px;user-select:text}@media screen and (max-width: 500px){div.insights-dialog-main-override--ma4DA{min-width:240px;width:75%}}div.insights-dialog-main-override--ma4DA .dialog-body--cmWmz{font-size:16px}.restart-button--1-9nA button{width:85px}.overview-help-section---P--0{width:308px;height:168px;padding-top:24px;margin-right:32px}@media screen and (max-width: 1200px){.overview-help-section---P--0{padding-top:0;margin-bottom:40px}}.overview--3Z80y{display:flex;flex-direction:row;flex-wrap:wrap;padding-left:32px}.overview--3Z80y .overview-text-summary-section--Hbc5v{display:flex;flex-direction:column;flex:1 1 50%;align-items:flex-start;width:90%;margin-right:32px}.overview-heading-content--eGCNq{color:var(--secondary-text);font-weight:400;line-height:20px;font-size:15px}.overview-heading--hhrss{margin-bottom:40px}.overview-heading--hhrss h1{font-weight:700!important;line-height:40px;font-size:28px!important;letter-spacing:-.04em;color:var(--primary-text)!important;padding-bottom:16px;padding-top:24px}.high-contrast-theme .insights-tooltip--DwELH{outline-style:solid;outline-width:1px;outline-color:var(--white)}.insights-tooltip-host--MhYAf{display:inline-block;min-width:0}.insights-link---UKMy{display:flex}.insights-link---UKMy:hover,.insights-link---UKMy:active{text-decoration:none!important}.help-link--3A-PK{padding-top:5px;padding-bottom:5px;font-family:"Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;line-height:20px;font-size:15px;color:var(--communication-primary)}.overview-help-container--CIf5X{padding-top:20px;padding-left:24px;padding-bottom:24px;border-radius:4px;background-color:var(--help-links-section-background);border:1px solid var(--help-links-section-border);box-sizing:border-box}.help-heading--SkWwv{font-weight:600;font-size:17px;padding:0;margin-block-end:1em;margin-inline-start:0;margin-inline-end:0}.header-with-content-link--IJtjj{display:flex}.header-with-content-link--IJtjj h1{margin-right:8px}.header-with-content-link--IJtjj div{align-self:center}.static-content-in-details-view--RtXb0{padding-top:24px;padding-right:24px;padding-left:24px;margin-bottom:auto;background-color:var(--neutral-2);height:100%}.static-content-in-details-view--RtXb0 ol{-webkit-padding-start:16px}.static-content-in-details-view--RtXb0 ol li ul li{list-style-type:disc}.static-content-in-details-view--RtXb0 i{font-size:16px}.details-view-toggle--kKKiI{margin-bottom:0;margin-top:12px;height:40px;background-color:var(--neutral-4)}.details-view-toggle--kKKiI .ms-Toggle-label{float:left;margin:5px 8px;color:var(--neutral-100)}.details-view-toggle--kKKiI .ms-Toggle-innerContainer{margin:10px 0}button.insights-command-button--T-hSI .command-bar-button-icon--nEHZq{line-height:16px}button.insights-command-button--T-hSI:disabled{color:var(--disabled-text)}button.insights-command-button--T-hSI:disabled .command-bar-button-icon--nEHZq{color:var(--disabled-text)}button.insights-command-button--T-hSI:active:not(:disabled) .command-bar-button-icon--nEHZq{color:var(--primary-text)}.inline-start-over-button--8yKbR{height:fit-content;padding:4px;margin-bottom:-4px;vertical-align:text-bottom;border-color:var(--secondary-text);background-color:var(--neutral-0)}.target-page-changed-subtitle--lbFxS{color:var(--secondary-text);max-width:570px;font-size:14px;margin-top:4px;margin-bottom:16px}span.collapsible-title--fMRHE{padding-left:.5vw}.collapsible--hRtW-{padding:0;cursor:pointer;width:100%;border:none;outline:none;line-height:.25px;display:flex;justify-content:flex-start;align-items:center}.collapsible--hRtW- h2{font-weight:300;font-size:17px}.collapsible-content--nz7H1{overflow:hidden;padding-left:calc(.5vw + 13px)}.tab-stops-test-view-container--uW09o{background-color:var(--neutral-2);height:100%}.tab-stops-test-view--PVoaa{padding-top:24px;padding-right:24px;padding-left:24px;margin-bottom:auto;background-color:var(--neutral-2)}.tab-stops-test-view--PVoaa i{font-size:16px}.tab-stops-test-view--PVoaa .tab-stops-test-view-header--IiOGa{margin-right:8px}.requirement-table-title--v1y2E{font-weight:600;font-size:17px;line-height:24px;margin-bottom:unset}.visual-helper-toggle--1ssaD{display:flex;align-items:center;word-wrap:break-word;margin:unset}.visual-helper-toggle--1ssaD label{font-family:"Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;font-weight:400;font-size:14px;line-height:20px;margin-right:8px;font-weight:600}.requirement-how-to-test-header--myxoc{font-weight:600;font-size:17px;line-height:24px;padding-left:.5vw;display:block}.requirement-instructions-header--z7LRH{font-style:normal;font-weight:600;font-size:16px;line-height:20px;padding-left:.5vw;display:block}.requirement-instructions--IW7Iz{font-family:"Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol}.requirement-instructions--IW7Iz p,.requirement-instructions--IW7Iz ol,.requirement-instructions--IW7Iz li{margin-top:5px;margin-bottom:5px}.requirement-instructions--IW7Iz ol{-webkit-padding-start:16px}.requirement-instructions--IW7Iz ol ol{list-style-type:lower-alpha}.requirement-instructions--IW7Iz ol ol ol{list-style-type:lower-roman}.action-and-cancel-buttons-component--DF7bf{display:flex;justify-content:flex-end}.action-and-cancel-buttons-component--DF7bf .action-cancel-button-col--RMfN-+.action-cancel-button-col--RMfN-{margin-left:8px}.generic-panel--xXyG-{color:var(--neutral-100)}.header-text--UvZ3Z{font-weight:600;font-size:21px;line-height:32px;letter-spacing:-.02em;color:var(--neutral-100);margin-bottom:20px}.failure-instance-panel--zQ5Wt .observed-failure-textfield--Rf8Co{padding-bottom:12px}.failure-instance-panel--zQ5Wt .header-text{font-size:21px}.failure-instance-snippet-empty-body--PUexR{margin-top:8px;margin-bottom:24px;color:var(--secondary-text)}.failure-instance-snippet-title--f2lSB{margin-top:24px;margin-bottom:8px;color:var(--primary-text)}.failure-instance-selector-note--u4Ug1{color:var(--secondary-text);margin-top:8px;margin-bottom:8px}.failure-instance-snippet-filled-body--9MFyu{margin-top:8px;margin-bottom:24px;padding:12px 16px;max-height:200px;color:var(--primary-text);background-color:var(--neutral-4);overflow-y:scroll;word-wrap:break-word}.failure-instance-snippet-error--twv1z{margin-top:9px;margin-bottom:50px;margin-left:9px;color:var(--secondary-text);display:flex;flex-direction:row}.failure-instance-snippet-error-icon--lxIV1{color:var(--negative-outcome);padding:3px 8px}.edit-button--hhwNy{font-size:16px!important;line-height:24px!important;color:var(--neutral-100)!important}.edit-button--hhwNy:hover,.edit-button--hhwNy:focus{color:linktext!important}@media screen and (forced-colors: active){.edit-button--hhwNy{color:inherit!important}}@media screen and (forced-colors: active) and (forced-colors: active){.edit-button--hhwNy{forced-color-adjust:unset}}@media screen and (forced-colors: active){.edit-button--hhwNy:hover,.edit-button--hhwNy:focus{color:initial!important}}.issues-test-view--d0CNp{background-color:var(--neutral-2);height:100%}.scanning-spinner--jeHG9{margin-top:50px}.issue-filing-dialog--F9jun .ms-Dialog-title{font-size:21px;line-height:32px;letter-spacing:-.02em;font-weight:600;padding-bottom:0}.issue-filing-dialog--F9jun .ms-Dialog-subText{font-weight:400;font-size:15px;color:var(--secondary-text)}.issue-filing-dialog--F9jun .textfield-description{color:var(--secondary-text);font-style:italic}.details-disabled-message--NGo5z{margin-top:5px;margin-bottom:5px;font-size:14px}.issues-table--0jawk{background-color:var(--neutral-2);width:calc(100% - 48px);display:flex;flex-direction:column;padding-top:24px;padding-right:24px;padding-left:24px}.issues-table--0jawk .issues-table-subtitle--SwQ6H{color:var(--secondary-text);max-width:570px;font-size:14px;margin-top:4px;margin-bottom:16px}.issues-table--0jawk .issues-table-content--SD1dX{height:100%;display:flex;flex-direction:column;min-height:0}.getting-started-view--7gL6C{margin-right:18px;margin-left:18px;padding-left:6px;padding-top:1vh;padding-bottom:1vh;display:flex;flex-direction:column;height:100%;justify-content:space-between}.getting-started-header--JP1v7{font-weight:600;font-size:21px;line-height:32px;letter-spacing:-.02em;padding-top:8px}.getting-started-header--JP1v7 i{font-size:16px}.getting-started-header-title--HzdQh{margin-right:8px}.getting-started-title--NaMyN{font-weight:600;font-size:17px;line-height:24px}.next-requirement-button--o-C01{align-self:flex-end}.requirement-view-title--KCjY-{font-weight:600;font-size:21px;line-height:32px;letter-spacing:-.02em;color:var(--primary-text);display:flex;align-items:center}.requirement-view--VJpPz{margin-right:18px;margin-left:18px;padding-left:6px;padding-top:1vh;display:flex;flex-direction:column;height:100%;justify-content:space-between}.requirement-view--VJpPz .next-requirement-button-container--hiHnU{display:flex;flex-direction:column}.requirement-view--VJpPz .next-requirement-button--MB2Mv{align-self:flex-end;margin-bottom:1vh;margin-top:1vh}.requirement-view--VJpPz .main-content--z1Mtq{margin-top:10px}.requirement-view--VJpPz .main-content--z1Mtq h3{font-weight:600;font-size:17px}.visual-helper{display:flex;padding-top:1.5vh;flex-wrap:wrap}.visual-helper .visual-helper-text{padding-right:.9vh;font-family:"Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;font-size:14px;line-height:20px}.no-matching-elements{font-weight:700}.left-nav-hamburger-button---jYWo{margin-left:11px}.high-contrast-theme--gB86W .left-nav-hamburger-button---jYWo{color:var(--neutral-alpha-90)}.ms-Button.left-nav-hamburger-button---jYWo:focus:after{border:1px var(--neutral-0) solid}.command-bar-buttons-menu-button--jiAf3{font-size:16px}.command-bar-buttons-submenu--TunVw{min-width:fit-content}.command-bar-buttons-submenu--TunVw button{height:36px}.command-bar-buttons-menu--UEARX{height:40px}.details-view-command-buttons--BkYsp{display:flex;margin-right:16px;white-space:nowrap}.details-view-command-bar--3BkZm{height:40px;width:100%;display:flex;justify-content:space-between;min-height:fit-content;align-items:center;background-color:var(--neutral-0);font-size:14px;font-weight:400;border-bottom:1px solid var(--neutral-alpha-8)}.details-view-command-bar--3BkZm .details-view-target-page--CqPLT{margin-left:12px;padding:8px;display:inherit;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--primary-text);flex:1 1 auto}.target-page-title--DBzsa{width:100%;text-overflow:ellipsis;display:inline-block;overflow:hidden}.target-page-link--2MENu{width:100%}.invalid-load-assessment-dialog--MWP29 button{width:140px}.load-button--f6OXK button{width:140px}.export-dialog--5ThRt{max-width:640px;width:75%;min-width:240px!important;user-select:text}.start-over-menu-item---gz1Z .start-over-menu-item-icon--4qfx3{line-height:16px}.start-over-menu-item---gz1Z button:disabled,.start-over-menu-item---gz1Z button[aria-disabled=true]{color:var(--disabled-text)}.start-over-menu-item---gz1Z button:disabled .start-over-menu-item-icon--4qfx3,.start-over-menu-item---gz1Z button[aria-disabled=true] .start-over-menu-item-icon--4qfx3{color:var(--disabled-text)}.start-over-menu-item---gz1Z button:active .start-over-menu-item-icon--4qfx3{color:var(--primary-text)}.start-over-menu-item---gz1Z button:hover{background-color:var(--neutral-0);color:var(--insights-button-hover)}.start-over-menu-item---gz1Z button:hover .start-over-menu-item-icon--4qfx3{color:var(--insights-button-hover)}.details-view-test-nav-area--JYw22{box-sizing:border-box;overflow-x:hidden}@media screen and (forced-colors: active){.details-view-test-nav-area--JYw22 a:focus{border:3px highlighttext solid}}.details-view-test-nav-area--JYw22 li .is-selected{background-color:var(--nav-link-selected)}.details-view-test-nav-area--JYw22 li .is-selected a,.details-view-test-nav-area--JYw22 li .is-selected button{background-color:var(--nav-link-selected)!important}.details-view-test-nav-area--JYw22 li .is-expanded,.details-view-test-nav-area--JYw22 li .is-expanded+ul{background-color:var(--nav-link-expanded)}.details-view-test-nav-area--JYw22 li .ms-Nav-compositeLink:hover a,.details-view-test-nav-area--JYw22 li .ms-Nav-compositeLink:hover button{background-color:var(--nav-link-hover)}a.nav-link-button--F41J7:hover,a.nav-link-button--F41J7:active,a.nav-link-button--F41J7:focus,a.nav-link-button--F41J7:active:hover,button.nav-link-button--F41J7:hover,button.nav-link-button--F41J7:active,button.nav-link-button--F41J7:focus,button.nav-link-button--F41J7:active:hover{text-decoration:none}@media screen and (forced-colors: active){a.nav-link-button--F41J7,button.nav-link-button--F41J7{forced-color-adjust:unset}}.no-preview-feature-message--nT2zt{font-family:"Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;font-weight:400;font-size:14px;line-height:20px}.preview-feature-toggle-list--m7--q{margin-top:2vh}.selector-input-list--zAxwM .selector-input-title--srWsD{margin-top:.5vh;margin-bottom:.5vh}.selector-input-list--zAxwM .selector-list--MRjbp{border:solid 1px var(--neutral-30);margin-top:1vh;margin-bottom:3vh;height:15%;overflow:auto}.selector-input-list--zAxwM .selector-list--MRjbp .ms-List-cell:last-child{border-bottom:solid var(--neutral-20) 1px}.selector-input-list--zAxwM .selector-list--MRjbp .ms-List-cell+.ms-List-cell{border-top:solid var(--neutral-20) 1px}.selector-input-list--zAxwM .selector-list--MRjbp .delete-selector-button--gSHsr{background:var(--neutral-0);padding-right:0;margin:1px}.selector-input-list--zAxwM .selector-list--MRjbp .delete-selector-button--gSHsr .delete-selector-icon--Zjvzu{color:var(--neutral-30)}.selector-input-list--zAxwM .selector-input-field--UrmHU{width:55%}.selector-input-list--zAxwM .textbox-add-selector-button--VOrm2{width:35%}.selector-input-list--zAxwM .add-selector-buttons--cGkHU{width:40%}.selector-input-list--zAxwM .add-selector-buttons--cGkHU .textbox-add-selector-button--VOrm2{width:80%}.selector-input-item-cell--X-HsU{padding-left:1vh}.selector-input-item-cell--X-HsU .selector-input-item-content--y-UDn,.selector-input-add--SNQo1{display:flex;justify-content:space-between;align-items:center}.scoping-description--5-Iaf{padding-bottom:1vh}.settings-panel--OvJWQ h3{font-weight:600;font-size:17px;line-height:24px;margin-block-end:8px}.settings-panel--OvJWQ .issue-setting--UJiQr .ms-Label{color:var(--neutral-100);padding-top:8px;padding-bottom:8px}.settings-panel--OvJWQ .issue-setting--UJiQr .ms-TextField-field{color:var(--neutral-100)}.settings-panel--OvJWQ .textfield-description{color:var(--secondary-text);font-style:italic}.ms-Button.gear-menu-button--LXZii:focus:after{border:1px var(--neutral-0) solid}.high-contrast-theme .gear-menu-button--LXZii{color:var(--neutral-alpha-90)}.high-contrast-theme .gear-menu-button-callout--a80-T{box-shadow:var(--white) 0 0 1px 0!important;border-radius:unset}.nav-menu---BFga{color:var(--neutral-0)}.switcher-dropdown-option--Fpt3Z{display:flex;flex-direction:row}.switcher-dropdown-option--Fpt3Z i{margin-right:8px}.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D{margin:8px}.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D .ms-Dropdown-title,.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D:focus .ms-Dropdown-title,.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D:hover .ms-Dropdown-title,.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D:active .ms-Dropdown-title,.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D:hover:active .ms-Dropdown-title{border:1px var(--neutral-alpha-90) solid;border-radius:2px;background-color:var(--neutral-0);height:32px;box-sizing:border-box;width:inherit;color:var(--neutral-alpha-90)}.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D .ms-Dropdown-title i,.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D:focus .ms-Dropdown-title i,.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D:hover .ms-Dropdown-title i,.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D:active .ms-Dropdown-title i,.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D:hover:active .ms-Dropdown-title i{margin-right:8px}.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D .ms-Dropdown-caretDownWrapper,.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D:focus .ms-Dropdown-caretDownWrapper,.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D:hover .ms-Dropdown-caretDownWrapper,.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D:active .ms-Dropdown-caretDownWrapper,.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D:hover:active .ms-Dropdown-caretDownWrapper{top:2px;right:18px}.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D .ms-Dropdown-caretDown,.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D:focus .ms-Dropdown-caretDown,.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D:hover .ms-Dropdown-caretDown,.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D:active .ms-Dropdown-caretDown,.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D:hover:active .ms-Dropdown-caretDown{color:var(--neutral-alpha-90)}.left-nav-switcher--SK4ld .left-nav-switcher-dropdown--Blj4D .ms-Dropdown:focus:after{border:1px var(--neutral-alpha-90) solid;border-radius:2px;outline:1px var(--neutral-alpha-90) solid;outline-offset:-5px}.left-nav--4ZRSF{overflow-y:auto;border-right:1px solid var(--neutral-8);z-index:100;background-color:var(--neutral-0);max-height:calc(100vh - 40px);height:calc(100vh - 40px)}.left-nav--4ZRSF .left-nav-icon{color:var(--neutral-60)}.left-nav--4ZRSF .ms-Nav-groupContent{margin-bottom:0}.left-nav--4ZRSF .ms-Nav-link{height:fit-content;width:unset}.left-nav--4ZRSF button{text-align:left}.left-nav--4ZRSF button.ms-Nav-link{width:100%}.left-nav--4ZRSF .overview-label{padding-left:10%;text-align:left;margin-top:6px;margin-bottom:6px;display:flex;flex-direction:column}.left-nav--4ZRSF .overview-name{line-height:20px}.left-nav--4ZRSF .overview-percent{color:var(--neutral-55);line-height:16px;font-size:12px}.left-nav--4ZRSF .ms-Nav-navItems{margin-top:0!important}.left-nav--4ZRSF .ms-Nav-compositeLink a,.left-nav--4ZRSF .ms-Nav-compositeLink button{border-top:0;border-bottom:0}.left-nav--4ZRSF .ms-Nav-compositeLink .ms-Button-label{color:var(--neutral-100)}.left-nav--4ZRSF .ms-Nav-compositeLink.is-selected .ms-Button-label{color:var(--light-black)}.left-nav--4ZRSF .ms-Nav-compositeLink.is-selected a,.left-nav--4ZRSF .ms-Nav-compositeLink.is-selected button{background-color:var(--communication-tint-40)}.left-nav--4ZRSF .ms-Nav-compositeLink.is-selected a .ms-Button-label,.left-nav--4ZRSF .ms-Nav-compositeLink.is-selected a .overview-percent,.left-nav--4ZRSF .ms-Nav-compositeLink.is-selected button .ms-Button-label,.left-nav--4ZRSF .ms-Nav-compositeLink.is-selected button .overview-percent{color:var(--black)}.left-nav--4ZRSF .ms-Nav-compositeLink.is-selected a .left-nav-icon,.left-nav--4ZRSF .ms-Nav-compositeLink.is-selected button .left-nav-icon{color:var(--left-nav-icon)}.left-nav--4ZRSF .ms-Nav-compositeLink.is-selected a:after,.left-nav--4ZRSF .ms-Nav-compositeLink.is-selected button:after{border-left:3px solid var(--communication-primary)}.left-nav--4ZRSF .ms-Pivot-text{font-size:11px}.left-nav--4ZRSF .ms-Pivot-icon{font-size:9px}#side-nav-container--prZNx,.left-nav-panel--Aj--y .ms-Panel-main{width:250px}.left-nav-panel--Aj--y .ms-Panel-content{padding:0}.left-nav-panel--Aj--y .ms-Panel-content .main-nav{max-height:calc(100vh - 40px);height:calc(100vh - 40px)}.details-view-body---OfxB{height:100%}.details-view-content-pane-container--43222{display:flex;flex-direction:column;padding-bottom:1px;box-sizing:border-box;width:calc(100vw - 250px);height:100%;max-height:calc(100vh - 40px)}.details-view-content-pane-container--43222.narrow-mode--iLHib{width:100%}.details-view-body-nav-content-layout--3mshl{display:flex;flex-wrap:nowrap;justify-content:flex-start;align-items:flex-start;align-content:stretch;padding-left:0;padding-right:0;width:100%;min-height:0;height:100%}.details-view-body-nav-content-layout--3mshl .ms-Pivot{border-bottom:1px solid var(--neutral-8);padding-left:12px}.details-view-body-nav-content-layout--3mshl .details-view-body-content-pane--RTzxc{display:flex;flex-direction:column;height:100%;word-break:break-word;width:100%;overflow:auto;box-sizing:border-box;max-height:calc(100vh - 1px40px40px)}.details-view-body-nav-content-layout--3mshl .details-view-body-content-pane--RTzxc>div{width:100%;height:auto}.details-view-body-nav-content-layout--3mshl .details-view-body-content-pane--RTzxc .ms-MessageBar-icon i{margin-left:12px;color:var(--light-black)}@media screen and (forced-colors: active){.details-view-body-nav-content-layout--3mshl .details-view-body-content-pane--RTzxc .ms-MessageBar-icon i{color:inherit}}.details-view-body-nav-content-layout--3mshl .details-view-body-content-pane--RTzxc .ms-MessageBar-text .insights-link{color:inherit!important;text-decoration:underline}.details-view-body-nav-content-layout--3mshl .details-view-body-content-pane--RTzxc .view--MyMfK{flex-grow:1;height:100%;width:100%;display:flex;flex-direction:column;min-height:0}.details-view-body-nav-content-layout--3mshl .details-view-body-content-pane--RTzxc .view--MyMfK h1{margin:0;font-weight:600;font-size:21px;color:var(--neutral-100)}.details-view-body-nav-content-layout--3mshl .details-view-body-content-pane--RTzxc .view--MyMfK b{font-weight:600}.remove-button--DNwzM{margin-left:12px;font-size:16px;line-height:24px;color:var(--negative-outcome)}.remove-button--DNwzM:hover,.remove-button--DNwzM:focus{color:linktext!important}@media screen and (forced-colors: active){.remove-button--DNwzM{color:inherit!important}}@media screen and (forced-colors: active) and (forced-colors: active){.remove-button--DNwzM{forced-color-adjust:unset}}@media screen and (forced-colors: active){.remove-button--DNwzM:hover,.remove-button--DNwzM:focus{color:initial!important}}.instance-visibility-button--aG3-x,.instance-visibility-button--aG3-x:active,.instance-visibility-button--aG3-x:focus{color:var(--primary-text);padding-bottom:6px;background-color:inherit}@media screen and (forced-colors: active){.instance-visibility-button--aG3-x,.instance-visibility-button--aG3-x:active,.instance-visibility-button--aG3-x:focus{color:inherit;outline:1px inherit solid}}.test-instance-selected--6WhXD{padding:2px;color:var(--neutral-0)}.test-instance-selected-hidden--kiZnB{background-color:var(--neutral-60);cursor:default}.test-instance-selected-visible--YwdDz{background-color:var(--communication-primary)}.test-instance-selected-hidden-button--ig-CF{background-color:transparent}
+</style></head><body><header data-automation-id="report-header-section"><div class="report-header-bar--SDV11"><svg role="img" aria-hidden="true" class="header-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0" maskUnits="userSpaceOnUse" x="0" y="3" width="48" height="43" style="mask-type:alpha"><path d="M43.8309 27.1383C49.3148 21.6544 49.3148 12.7633 43.8309 7.27934C38.347 1.79544 29.4558 1.79543 23.9719 7.27934C18.488 1.79544 9.59684 1.79544 4.11293 7.27934C-1.37098 12.7633 -1.37098 21.6544 4.11293 27.1383L21.986 45.0114C23.0828 46.1082 24.861 46.1082 25.9578 45.0114L43.8309 27.1383Z" fill="white"></path></mask><g mask="url(#mask0)"><path d="M43.8309 27.1383C49.3148 21.6544 49.3148 12.7633 43.8309 7.27934C38.347 1.79544 29.4558 1.79543 23.9719 7.27934C18.488 1.79544 9.59684 1.79544 4.11293 7.27934C-1.37098 12.7633 -1.37098 21.6544 4.11293 27.1383L21.986 45.0114C23.0828 46.1082 24.861 46.1082 25.9578 45.0114L43.8309 27.1383Z" fill="white"></path><rect x="43.9494" y="7.24556" width="14.0948" height="42.2726" transform="rotate(45 43.9494 7.24556)" fill="#D6E9F7"></rect><mask id="mask1" maskUnits="userSpaceOnUse" x="-6" y="-3" width="30" height="31" style="mask-type:alpha"><path d="M23.9718 7.27863L4.11284 27.1376C-1.37106 21.6537 -1.37106 12.7625 4.11284 7.27863C9.59675 1.79472 18.4879 1.79472 23.9718 7.27863Z" fill="#CFEBFF"></path><path d="M23.9718 7.27863L4.11284 27.1376C-1.37106 21.6537 -1.37106 12.7625 4.11284 7.27863C9.59675 1.79472 18.4879 1.79472 23.9718 7.27863Z" fill="url(#paint0_linear)"></path></mask><g mask="url(#mask1)"><path d="M23.9718 7.27863L4.11284 27.1376C-1.37106 21.6537 -1.37106 12.7625 4.11284 7.27863C9.59675 1.79472 18.4879 1.79472 23.9718 7.27863Z" fill="white"></path><path d="M23.9718 7.27863L4.11284 27.1376C-1.37106 21.6537 -1.37106 12.7625 4.11284 7.27863C9.59675 1.79472 18.4879 1.79472 23.9718 7.27863Z" fill="url(#paint1_linear)"></path><rect x="4.54834" y="6.88206" width="16.3577" height="42.2726" transform="rotate(-45 4.54834 6.88206)" fill="#D6E9F7"></rect><rect x="4.54834" y="6.88206" width="16.3577" height="42.2726" transform="rotate(-45 4.54834 6.88206)" fill="url(#paint2_linear)"></rect></g><g filter="url(#filter0_d)"><path fill-rule="evenodd" clip-rule="evenodd" d="M34.0764 27.3564C39.8071 27.3483 44.4461 22.6961 44.438 16.9655C44.4299 11.2349 39.7778 6.59585 34.0472 6.60393C28.3165 6.61201 23.6775 11.2642 23.6856 16.9948C23.6888 19.2829 24.4324 21.397 25.6895 23.1108L23.4287 25.3788C22.8852 25.395 22.3466 25.6109 21.9324 26.0265L17.1218 30.8526C16.4185 31.5582 16.4203 32.7005 17.126 33.4038L17.6952 33.9713C18.4009 34.6746 19.5431 34.6728 20.2465 33.9671L25.057 29.141C25.4715 28.7252 25.6857 28.1855 25.6998 27.6415L27.9603 25.3737C29.6766 26.6235 31.7907 27.3596 34.0764 27.3564ZM34.0368 23.2439C37.4964 23.2579 40.3122 20.4647 40.3262 17.0051C40.3401 13.5456 37.5469 10.7298 34.0874 10.7158C30.6279 10.7018 27.812 13.495 27.7981 16.9545C27.7841 20.4141 30.5773 23.2299 34.0368 23.2439Z" fill="#004880"></path></g></g><defs><filter id="filter0_d" x="15.748" y="6.50654" width="29.5246" height="29.5269" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></feColorMatrix><feOffset dy="0.725705"></feOffset><feGaussianBlur stdDeviation="0.40317"></feGaussianBlur><feColorMatrix type="matrix" values="0 0 0 0 0.0447352 0 0 0 0 0.305769 0 0 0 0 0.492222 0 0 0 0.51 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"></feBlend><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feBlend></filter><linearGradient id="paint0_linear" x1="14.3166" y1="16.8744" x2="5.92409" y2="8.23504" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#073A5F" stop-opacity="0.3"></stop><stop offset="1" stop-color="#CFEBFF" stop-opacity="0"></stop></linearGradient><linearGradient id="paint1_linear" x1="14.3166" y1="16.8744" x2="5.92409" y2="8.23504" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#165B8E" stop-opacity="0.29"></stop><stop offset="1" stop-color="white" stop-opacity="0"></stop></linearGradient><linearGradient id="paint2_linear" x1="11.3179" y1="20.1024" x2="11.0819" y2="11.1606" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#165B8E" stop-opacity="0.29"></stop><stop offset="1" stop-color="#D6E9F7" stop-opacity="0"></stop></linearGradient></defs></svg><div class="header-text--EdTxw">Accessibility Insights for Web</div></div><div class="report-header-command-bar--NJWdl"><div class="target-page--hjh44">Target page: <a target="_blank" href="https://moneyconvey.com/" class="ms-Link insights-link root-186" title="Money Convey" id="new-tab-link-with-confirmation-dialog__521">Money Convey</a><script>(function(e,t,r){t.getElementById(e).addEventListener("click",function(o){r(`Are you sure you want to navigate away from the Accessibility Insights report?
+This link will open the target page in a new tab.
+
+Press OK to continue or Cancel to stay on the current page.`)===!1&&o.preventDefault()})})("new-tab-link-with-confirmation-dialog__521", document, confirm);</script></div></div></header><main class="outer-container"><div class="content-container"><div class="title-section"><h1>FastPass results</h1></div><div class="scan-details-section"><h2>Scan details</h2><ul class="details-section-list"><li><span class="icon"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><path d="M8.82353 0C9.5579 0 10.2662 0.0963542 10.9485 0.289062C11.6308 0.476562 12.2688 0.744792 12.8626 1.09375C13.4563 1.4375 13.9954 1.85417 14.4798 2.34375C14.9694 2.82812 15.386 3.36719 15.7298 3.96094C16.0787 4.55469 16.347 5.19271 16.5345 5.875C16.7272 6.55729 16.8235 7.26562 16.8235 8C16.8235 8.73438 16.7272 9.44271 16.5345 10.125C16.347 10.8073 16.0787 11.4453 15.7298 12.0391C15.386 12.6328 14.9694 13.1745 14.4798 13.6641C13.9954 14.1484 13.4563 14.5651 12.8626 14.9141C12.2688 15.2578 11.6308 15.526 10.9485 15.7188C10.2662 15.9062 9.5579 16 8.82353 16C8.08915 16 7.38082 15.9062 6.69853 15.7188C6.01624 15.526 5.37822 15.2578 4.78447 14.9141C4.19072 14.5651 3.64905 14.1484 3.15947 13.6641C2.67509 13.1745 2.25843 12.6328 1.90947 12.0391C1.56572 11.4453 1.29749 10.8099 1.10478 10.1328C0.917279 9.45052 0.823529 8.73958 0.823529 8C0.823529 7.26562 0.917279 6.55729 1.10478 5.875C1.29749 5.19271 1.56572 4.55469 1.90947 3.96094C2.25843 3.36719 2.67509 2.82812 3.15947 2.34375C3.64905 1.85417 4.19072 1.4375 4.78447 1.09375C5.37822 0.744792 6.01363 0.476562 6.69072 0.289062C7.37301 0.0963542 8.08395 0 8.82353 0ZM15.1438 5C14.9459 4.57812 14.7063 4.18229 14.4251 3.8125C14.1438 3.4375 13.8313 3.09635 13.4876 2.78906C13.1438 2.48177 12.7714 2.20833 12.3704 1.96875C11.9694 1.72917 11.5501 1.53385 11.1126 1.38281C11.3001 1.64323 11.4694 1.91927 11.6204 2.21094C11.7714 2.5026 11.9043 2.80469 12.0188 3.11719C12.1386 3.42448 12.2402 3.73698 12.3235 4.05469C12.4069 4.3724 12.4798 4.6875 12.5423 5H15.1438ZM15.8235 8C15.8235 7.30729 15.7272 6.64062 15.5345 6H12.6985C12.7402 6.33333 12.7714 6.66667 12.7923 7C12.8131 7.32812 12.8235 7.66146 12.8235 8C12.8235 8.33854 12.8131 8.67448 12.7923 9.00781C12.7714 9.33594 12.7402 9.66667 12.6985 10H15.5345C15.7272 9.35938 15.8235 8.69271 15.8235 8ZM8.82353 15C9.07874 15 9.31572 14.9297 9.53447 14.7891C9.75843 14.6484 9.96415 14.4635 10.1517 14.2344C10.3392 14.0052 10.5058 13.7474 10.6517 13.4609C10.8027 13.1693 10.9355 12.875 11.0501 12.5781C11.1647 12.2812 11.261 11.9948 11.3392 11.7188C11.4173 11.4427 11.4772 11.2031 11.5188 11H6.12822C6.16988 11.2031 6.22978 11.4427 6.3079 11.7188C6.38603 11.9948 6.48238 12.2812 6.59697 12.5781C6.71155 12.875 6.84176 13.1693 6.98759 13.4609C7.13863 13.7474 7.3079 14.0052 7.4954 14.2344C7.6829 14.4635 7.88603 14.6484 8.10478 14.7891C8.32874 14.9297 8.56832 15 8.82353 15ZM11.6907 10C11.7324 9.66667 11.7636 9.33594 11.7845 9.00781C11.8105 8.67448 11.8235 8.33854 11.8235 8C11.8235 7.66146 11.8105 7.32812 11.7845 7C11.7636 6.66667 11.7324 6.33333 11.6907 6H5.95634C5.91468 6.33333 5.88082 6.66667 5.85478 7C5.83395 7.32812 5.82353 7.66146 5.82353 8C5.82353 8.33854 5.83395 8.67448 5.85478 9.00781C5.88082 9.33594 5.91468 9.66667 5.95634 10H11.6907ZM1.82353 8C1.82353 8.69271 1.91988 9.35938 2.11259 10H4.94853C4.90686 9.66667 4.87561 9.33594 4.85478 9.00781C4.83395 8.67448 4.82353 8.33854 4.82353 8C4.82353 7.66146 4.83395 7.32812 4.85478 7C4.87561 6.66667 4.90686 6.33333 4.94853 6H2.11259C1.91988 6.64062 1.82353 7.30729 1.82353 8ZM8.82353 1C8.56832 1 8.32874 1.07031 8.10478 1.21094C7.88603 1.35156 7.6829 1.53646 7.4954 1.76562C7.3079 1.99479 7.13863 2.25521 6.98759 2.54688C6.84176 2.83333 6.71155 3.125 6.59697 3.42188C6.48238 3.71875 6.38603 4.00521 6.3079 4.28125C6.22978 4.55729 6.16988 4.79688 6.12822 5H11.5188C11.4772 4.79688 11.4173 4.55729 11.3392 4.28125C11.261 4.00521 11.1647 3.71875 11.0501 3.42188C10.9355 3.125 10.8027 2.83333 10.6517 2.54688C10.5058 2.25521 10.3392 1.99479 10.1517 1.76562C9.96415 1.53646 9.75843 1.35156 9.53447 1.21094C9.31572 1.07031 9.07874 1 8.82353 1ZM6.53447 1.38281C6.09697 1.53385 5.6777 1.72917 5.27665 1.96875C4.87561 2.20833 4.50322 2.48177 4.15947 2.78906C3.81572 3.09635 3.50322 3.4375 3.22197 3.8125C2.94072 4.18229 2.70113 4.57812 2.50322 5H5.10478C5.16728 4.6875 5.2402 4.3724 5.32353 4.05469C5.40686 3.73698 5.50582 3.42448 5.6204 3.11719C5.7402 2.80469 5.87561 2.5026 6.02665 2.21094C6.1777 1.91927 6.34697 1.64323 6.53447 1.38281ZM2.50322 11C2.70113 11.4219 2.94072 11.8203 3.22197 12.1953C3.50322 12.5651 3.81572 12.9036 4.15947 13.2109C4.50322 13.5182 4.87561 13.7917 5.27665 14.0312C5.6777 14.2708 6.09697 14.4661 6.53447 14.6172C6.34697 14.3568 6.1777 14.0807 6.02665 13.7891C5.87561 13.4974 5.7402 13.1979 5.6204 12.8906C5.50582 12.5781 5.40686 12.263 5.32353 11.9453C5.2402 11.6276 5.16728 11.3125 5.10478 11H2.50322ZM11.1126 14.6172C11.5501 14.4661 11.9694 14.2708 12.3704 14.0312C12.7714 13.7917 13.1438 13.5182 13.4876 13.2109C13.8313 12.9036 14.1438 12.5651 14.4251 12.1953C14.7063 11.8203 14.9459 11.4219 15.1438 11H12.5423C12.4798 11.3125 12.4069 11.6276 12.3235 11.9453C12.2402 12.263 12.1386 12.5781 12.0188 12.8906C11.9043 13.1979 11.7714 13.4974 11.6204 13.7891C11.4694 14.0807 11.3001 14.3568 11.1126 14.6172Z" fill="#737373"></path></svg></span><span class="screen-reader-only">target page url:</span><span class="text"><a target="_blank" href="https://moneyconvey.com/" class="ms-Link insights-link root-186" title="Money Convey" id="new-tab-link-with-confirmation-dialog__522">https://moneyconvey.com/</a><script>(function(e,t,r){t.getElementById(e).addEventListener("click",function(o){r(`Are you sure you want to navigate away from the Accessibility Insights report?
+This link will open the target page in a new tab.
+
+Press OK to continue or Cancel to stay on the current page.`)===!1&&o.preventDefault()})})("new-tab-link-with-confirmation-dialog__522", document, confirm);</script></span></li><li><span class="icon"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><path d="M8.82353 16C8.09697 16 7.39677 15.9062 6.72294 15.7188C6.05497 15.5312 5.42802 15.2676 4.84208 14.9277C4.26201 14.582 3.73173 14.1719 3.25126 13.6973C2.77665 13.2168 2.3665 12.6865 2.02079 12.1064C1.68095 11.5205 1.41728 10.8936 1.22978 10.2256C1.04228 9.55176 0.948529 8.85156 0.948529 8.125C0.948529 7.39844 1.04228 6.70117 1.22978 6.0332C1.41728 5.35937 1.68095 4.73242 2.02079 4.15234C2.3665 3.56641 2.77665 3.03613 3.25126 2.56152C3.73173 2.08105 4.26201 1.6709 4.84208 1.33105C5.42802 0.985352 6.05497 0.71875 6.72294 0.53125C7.39677 0.34375 8.09697 0.25 8.82353 0.25C9.55009 0.25 10.2474 0.34375 10.9153 0.53125C11.5892 0.71875 12.2161 0.985352 12.7962 1.33105C13.3821 1.6709 13.9124 2.08105 14.387 2.56152C14.8675 3.03613 15.2776 3.56641 15.6175 4.15234C15.9632 4.73242 16.2298 5.35937 16.4173 6.0332C16.6048 6.70117 16.6985 7.39844 16.6985 8.125C16.6985 8.85156 16.6048 9.55176 16.4173 10.2256C16.2298 10.8936 15.9632 11.5205 15.6175 12.1064C15.2776 12.6865 14.8675 13.2168 14.387 13.6973C13.9124 14.1719 13.3821 14.582 12.7962 14.9277C12.2161 15.2676 11.5892 15.5312 10.9153 15.7188C10.2474 15.9062 9.55009 16 8.82353 16ZM8.82353 1.375C7.89189 1.375 7.01591 1.55371 6.1956 1.91113C5.38115 2.2627 4.6663 2.74609 4.05107 3.36133C3.44169 3.9707 2.95829 4.68555 2.60087 5.50586C2.24931 6.32031 2.07353 7.19336 2.07353 8.125C2.07353 9.05664 2.24931 9.93262 2.60087 10.7529C2.95829 11.5674 3.44169 12.2822 4.05107 12.8975C4.6663 13.5068 5.38115 13.9902 6.1956 14.3477C7.01591 14.6992 7.89189 14.875 8.82353 14.875C9.75517 14.875 10.6282 14.6992 11.4427 14.3477C12.263 13.9902 12.9778 13.5068 13.5872 12.8975C14.2024 12.2822 14.6858 11.5674 15.0374 10.7529C15.3948 9.93262 15.5735 9.05664 15.5735 8.125C15.5735 7.19336 15.3948 6.32031 15.0374 5.50586C14.6858 4.68555 14.2024 3.9707 13.5872 3.36133C12.9778 2.74609 12.263 2.2627 11.4427 1.91113C10.6282 1.55371 9.75517 1.375 8.82353 1.375ZM8.82353 8.125V3.625H7.69853V9.25H12.1985V8.125H8.82353Z" fill="#737373"></path></svg></span><span class="screen-reader-only">scan date:</span><span class="text">2022-11-02 7:26 PM UTC</span></li></ul></div><div class="summary-section"><h2>Summary</h2><div class="outcome-summary-bar" aria-label="52 Failed, 0 Incomplete, 28 Passed" role="img" data-automation-id="outcome-summary-bar"><div style="flex-grow:52"><span class="fail summary-bar-left-edge"><span class="check-container"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#E81123"></circle><path d="M10.9837 6.27639C11.3352 5.92491 11.3352 5.35507 10.9837 5.00359C10.6322 4.65212 10.0624 4.65212 9.7109 5.00359L7.99722 6.71728L6.28375 5.00381C5.93227 4.65234 5.36242 4.65234 5.01095 5.00381C4.65948 5.35528 4.65948 5.92513 5.01095 6.2766L6.72443 7.99007L4.9837 9.7308C4.63222 10.0823 4.63222 10.6521 4.9837 11.0036C5.33517 11.3551 5.90502 11.3551 6.25649 11.0036L7.99722 9.26287L9.73816 11.0038C10.0896 11.3553 10.6595 11.3553 11.011 11.0038C11.3624 10.6523 11.3624 10.0825 11.011 9.73101L9.27001 7.99007L10.9837 6.27639Z" fill="var(--neutral-0)"></path></svg></span>52</span></div><div style="flex-grow:0"><span class="incomplete"><span class="check-container"></span>0</span></div><div style="flex-grow:28"><span class="pass summary-bar-right-edge"><span class="check-container"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#228722"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M6.05904 11.1417L6.0616 11.1442C6.10737 11.19 6.15668 11.23 6.20867 11.2643C6.57256 11.5046 7.06707 11.4646 7.38742 11.1442C7.38861 11.143 7.38982 11.1418 7.391 11.1406L11.9312 6.60041C12.2974 6.23427 12.2974 5.64071 11.9312 5.27457C11.5651 4.90848 10.9715 4.90848 10.6054 5.27457L6.72452 9.15545L5.60041 8.03134C5.2343 7.66524 4.64071 7.66524 4.27459 8.03134C3.90847 8.39747 3.90847 8.99104 4.27459 9.35718L6.05904 11.1417Z" fill="var(--neutral-0)"></path></svg></span>28</span></div></div></div><div class="results-container"><div class="title-section"><h2>Automated checks</h2></div><div class="failed-instances-container--3UUNb result-section--HfO9s" data-automation-id="result-section"><h3 class="heading-element-for-level--ifVX6"><span class="result-section-title--RGFI5"><span class="screen-reader-only">Failed instances 17</span><span class="title--WBYFE" aria-hidden="true">Failed instances</span><span class="outcome-chip-container--BT3j5" aria-hidden="true"><span class="outcome-chip outcome-chip-fail" title="17 Failed"><span class="icon"><span class="check-container"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#E81123"></circle><path d="M10.9837 6.27639C11.3352 5.92491 11.3352 5.35507 10.9837 5.00359C10.6322 4.65212 10.0624 4.65212 9.7109 5.00359L7.99722 6.71728L6.28375 5.00381C5.93227 4.65234 5.36242 4.65234 5.01095 5.00381C4.65948 5.35528 4.65948 5.92513 5.01095 6.2766L6.72443 7.99007L4.9837 9.7308C4.63222 10.0823 4.63222 10.6521 4.9837 11.0036C5.33517 11.3551 5.90502 11.3551 6.25649 11.0036L7.99722 9.26287L9.73816 11.0038C10.0896 11.3553 10.6595 11.3553 11.011 11.0038C11.3624 10.6523 11.3624 10.0825 11.011 9.73101L9.27001 7.99007L10.9837 6.27639Z" fill="var(--neutral-0)"></path></svg></span></span><span data-automation-id="count" class="count" aria-hidden="true"> 17</span><span class="screen-reader-only">17 Failed</span></span></span></span></h3><div class="rule-details-group--Tb-LW" data-automation-id="rule-details-group"><div class="collapsible-container collapsible-rule-details-group--V-HWh collapsed"><h4 class="heading-element-for-level--ifVX6 title-container"><button class="collapsible-control" aria-expanded="false" aria-controls="content-container-image-alt" aria-label="image-alt 5 Failed Ensures &lt;img&gt; elements have alternate text or a role of none or presentation"><span data-automation-id="rule-detail" class="rule-detail"><span class="outcome-chip-container--G5Dfr"><span aria-hidden="true"><span class="outcome-chip outcome-chip-fail" title="5 Failed"><span class="icon"><span class="check-container"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#E81123"></circle><path d="M10.9837 6.27639C11.3352 5.92491 11.3352 5.35507 10.9837 5.00359C10.6322 4.65212 10.0624 4.65212 9.7109 5.00359L7.99722 6.71728L6.28375 5.00381C5.93227 4.65234 5.36242 4.65234 5.01095 5.00381C4.65948 5.35528 4.65948 5.92513 5.01095 6.2766L6.72443 7.99007L4.9837 9.7308C4.63222 10.0823 4.63222 10.6521 4.9837 11.0036C5.33517 11.3551 5.90502 11.3551 6.25649 11.0036L7.99722 9.26287L9.73816 11.0038C10.0896 11.3553 10.6595 11.3553 11.011 11.0038C11.3624 10.6523 11.3624 10.0825 11.011 9.73101L9.27001 7.99007L10.9837 6.27639Z" fill="var(--neutral-0)"></path></svg></span></span><span data-automation-id="count" class="count" aria-hidden="true"> 5</span><span class="screen-reader-only">5 Failed</span></span></span></span><span><span data-automation-id="cards-rule-id" class="rule-details-id"><strong>image-alt</strong></span>: <span class="rule-details-description">Ensures &lt;img&gt; elements have alternate text or a role of none or presentation</span></span></span></button></h4><div id="content-container-image-alt" class="collapsible-content" aria-hidden="true"><div class="rule-more-resources--uw9mc"><div class="more-resources-title--jOuUL">Resources for this rule</div><span class="rule-details-id--s-TpO"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/image-alt" class="ms-Link insights-link root-186">More information about image-alt</a></span><span class="rule-guidance--TIQgm"><span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" class="ms-Link insights-link root-186">WCAG 1.1.1</a></span></span></div><ul data-automation-id="cards-rule-content" class="instance-details-list--YfkRy" aria-label="instances with additional information like path, snippet and how to fix"><li><div data-automation-id="instance-card" class="instance-details-card-container--KLHTp"><div class="instance-details-card--owGQF"><div><table class="report-instance-table--3VoZX"><tbody><tr class="row---3i35"><th class="row-label--FlVZl">Path</th><td class="row-content--07KUh">.c1-7z</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">Snippet</th><td class="row-content--07KUh snippet--hSNfv">&lt;img data-ux=&quot;Image&quot; src=&quot;//img1.wsimg.com/isteam/stock/jab4AAG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25&quot; data-aid=&quot;IMAGE_RENDERED&quot; class=&quot;x-el x-el-img c1-1 c1-2 c1-4 c1-1e c1-1a c1-1b c1-31 c1-32 c1-1q c1-7z c1-38 c1-b c1-c c1-80 c1-d c1-e c1-h c1-i&quot;&gt;</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">How to fix</th><td class="row-content--07KUh"><div class="how-to-fix-content--Zz96u"><div><div>Fix ONE of the following:</div><ul><li>Element does not have an alt attribute</li><li>aria-label attribute does not exist or is empty</li><li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li><li>Element has no title attribute</li><li>Element&#x27;s default semantics were not overridden with role=&quot;none&quot; or role=&quot;presentation&quot;</li></ul></div></div></td></tr></tbody></table></div></div></div></li><li><div data-automation-id="instance-card" class="instance-details-card-container--KLHTp"><div class="instance-details-card--owGQF"><div><table class="report-instance-table--3VoZX"><tbody><tr class="row---3i35"><th class="row-label--FlVZl">Path</th><td class="row-content--07KUh">img[data-aid=&quot;CONTENT_IMAGE1_RENDERED&quot;]</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">Snippet</th><td class="row-content--07KUh snippet--hSNfv">&lt;img data-ux=&quot;Image&quot; src=&quot;//img1.wsimg.com/isteam/ip/ecb0ed45-c7b5-4b87-b866-20d1457cb7ee/iStock-953499010_0.jpeg/:/cr=t:12.46%25,l:0%25,w:100%25,h:75.08%25/rs=w:600,h:300,cg:true&quot; srcset=&quot;&quot; data-aid=&quot;CONTENT_IMAGE1_RENDERED&quot; class=&quot;x-el x-el-img c1-1 c1-2 c1-22 c1-1e c1-1a c1-1b c1-31 c1-32 c1-1q c1-a2 c1-38 c1-b c1-c c1-a3 c1-a4 c1-d c1-e c1-h c1-i&quot;&gt;</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">How to fix</th><td class="row-content--07KUh"><div class="how-to-fix-content--Zz96u"><div><div>Fix ONE of the following:</div><ul><li>Element does not have an alt attribute</li><li>aria-label attribute does not exist or is empty</li><li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li><li>Element has no title attribute</li><li>Element&#x27;s default semantics were not overridden with role=&quot;none&quot; or role=&quot;presentation&quot;</li></ul></div></div></td></tr></tbody></table></div></div></div></li><li><div data-automation-id="instance-card" class="instance-details-card-container--KLHTp"><div class="instance-details-card--owGQF"><div><table class="report-instance-table--3VoZX"><tbody><tr class="row---3i35"><th class="row-label--FlVZl">Path</th><td class="row-content--07KUh">img[data-aid=&quot;CONTENT_IMAGE2_RENDERED&quot;]</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">Snippet</th><td class="row-content--07KUh snippet--hSNfv">&lt;img data-ux=&quot;Image&quot; src=&quot;//img1.wsimg.com/isteam/stock/113491/:/cr=t:12.33%25,l:0%25,w:100%25,h:75.33%25/rs=w:600,h:300,cg:true&quot; srcset=&quot;&quot; data-aid=&quot;CONTENT_IMAGE2_RENDERED&quot; class=&quot;x-el x-el-img c1-1 c1-2 c1-22 c1-1e c1-1a c1-1b c1-31 c1-32 c1-1q c1-a2 c1-38 c1-b c1-c c1-a3 c1-a4 c1-d c1-e c1-h c1-i&quot;&gt;</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">How to fix</th><td class="row-content--07KUh"><div class="how-to-fix-content--Zz96u"><div><div>Fix ONE of the following:</div><ul><li>Element does not have an alt attribute</li><li>aria-label attribute does not exist or is empty</li><li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li><li>Element has no title attribute</li><li>Element&#x27;s default semantics were not overridden with role=&quot;none&quot; or role=&quot;presentation&quot;</li></ul></div></div></td></tr></tbody></table></div></div></div></li><li><div data-automation-id="instance-card" class="instance-details-card-container--KLHTp"><div class="instance-details-card--owGQF"><div><table class="report-instance-table--3VoZX"><tbody><tr class="row---3i35"><th class="row-label--FlVZl">Path</th><td class="row-content--07KUh">img[alt=&quot;\a &quot;]</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">Snippet</th><td class="row-content--07KUh snippet--hSNfv">&lt;img data-ux=&quot;Image&quot; data-lazyimg=&quot;true&quot; data-srclazy=&quot;//img1.wsimg.com/isteam/stock/97992/:/cr=t:12.5%25,l:0%25,w:100%25,h:75%25/rs=w:600,h:300,cg:true&quot; src=&quot;data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=&quot; srcset=&quot;//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:451,h:225,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:600,h:300,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:600,h:300,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:600,h:300,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:600,h:300,cg:true,m,i:true/qt=q:1/ll=n:true 1536w&quot; sizes=&quot;(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px&quot; alt=&quot;
+&quot; data-aid=&quot;CONTENT_IMAGE3_RENDERED&quot; class=&quot;x-el x-el-img c1-1 c1-2 c1-22 c1-1e c1-1a c1-1b c1-31 c1-32 c1-1q c1-a2 c1-38 c1-b c1-c c1-a3 c1-a4 c1-d c1-e c1-h c1-i&quot;&gt;</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">How to fix</th><td class="row-content--07KUh"><div class="how-to-fix-content--Zz96u"><div><div>Fix the following:</div><ul><li>Element has an alt attribute containing only a space character, which is not ignored by all screen readers</li></ul></div></div></td></tr></tbody></table></div></div></div></li><li><div data-automation-id="instance-card" class="instance-details-card-container--KLHTp"><div class="instance-details-card--owGQF"><div><table class="report-instance-table--3VoZX"><tbody><tr class="row---3i35"><th class="row-label--FlVZl">Path</th><td class="row-content--07KUh">.c1-9p.c1-9q.c1-7u:nth-child(4) &gt; .c1-9r.c1-9s.c1-9t &gt; .c1-2d.c1-1b[data-ux=&quot;ContentCardWrapperImage&quot;] &gt; .x-el-span[data-ux=&quot;Element&quot;] &gt; picture &gt; .c1-a2.c1-a3.c1-a4</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">Snippet</th><td class="row-content--07KUh snippet--hSNfv">&lt;img data-ux=&quot;Image&quot; data-lazyimg=&quot;true&quot; data-srclazy=&quot;//img1.wsimg.com/isteam/stock/10724/:/cr=t:14.97%25,l:0%25,w:100%25,h:70.07%25/rs=w:600,h:300,cg:true&quot; src=&quot;data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=&quot; srcset=&quot;//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:451,h:225,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:600,h:300,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:600,h:300,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:600,h:300,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:600,h:300,cg:true,m,i:true/qt=q:1/ll=n:true 1536w&quot; sizes=&quot;(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px&quot; class=&quot;x-el x-el-img c1-1 c1-2 c1-22 c1-1e c1-1a c1-1b c1-31 c1-32 c1-1q c1-a2 c1-38 c1-b c1-c c1-a3 c1-a4 c1-d c1-e c1-h c1-i&quot;&gt;</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">How to fix</th><td class="row-content--07KUh"><div class="how-to-fix-content--Zz96u"><div><div>Fix ONE of the following:</div><ul><li>Element does not have an alt attribute</li><li>aria-label attribute does not exist or is empty</li><li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li><li>Element has no title attribute</li><li>Element&#x27;s default semantics were not overridden with role=&quot;none&quot; or role=&quot;presentation&quot;</li></ul></div></div></td></tr></tbody></table></div></div></div></li></ul></div></div><div class="collapsible-container collapsible-rule-details-group--V-HWh collapsed"><h4 class="heading-element-for-level--ifVX6 title-container"><button class="collapsible-control" aria-expanded="false" aria-controls="content-container-nested-interactive" aria-label="nested-interactive 1 Failed Ensures interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies"><span data-automation-id="rule-detail" class="rule-detail"><span class="outcome-chip-container--G5Dfr"><span aria-hidden="true"><span class="outcome-chip outcome-chip-fail" title="1 Failed"><span class="icon"><span class="check-container"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#E81123"></circle><path d="M10.9837 6.27639C11.3352 5.92491 11.3352 5.35507 10.9837 5.00359C10.6322 4.65212 10.0624 4.65212 9.7109 5.00359L7.99722 6.71728L6.28375 5.00381C5.93227 4.65234 5.36242 4.65234 5.01095 5.00381C4.65948 5.35528 4.65948 5.92513 5.01095 6.2766L6.72443 7.99007L4.9837 9.7308C4.63222 10.0823 4.63222 10.6521 4.9837 11.0036C5.33517 11.3551 5.90502 11.3551 6.25649 11.0036L7.99722 9.26287L9.73816 11.0038C10.0896 11.3553 10.6595 11.3553 11.011 11.0038C11.3624 10.6523 11.3624 10.0825 11.011 9.73101L9.27001 7.99007L10.9837 6.27639Z" fill="var(--neutral-0)"></path></svg></span></span><span data-automation-id="count" class="count" aria-hidden="true"> 1</span><span class="screen-reader-only">1 Failed</span></span></span></span><span><span data-automation-id="cards-rule-id" class="rule-details-id"><strong>nested-interactive</strong></span>: <span class="rule-details-description">Ensures interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies</span></span></span></button></h4><div id="content-container-nested-interactive" class="collapsible-content" aria-hidden="true"><div class="rule-more-resources--uw9mc"><div class="more-resources-title--jOuUL">Resources for this rule</div><span class="rule-details-id--s-TpO"><a target="_blank" href="https://dequeuniversity.com/rules/axe/4.4/nested-interactive?application=msftAI" class="ms-Link insights-link root-186">More information about nested-interactive</a></span><span class="rule-guidance--TIQgm"><span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" class="ms-Link insights-link root-186">WCAG 4.1.2</a></span></span></div><ul data-automation-id="cards-rule-content" class="instance-details-list--YfkRy" aria-label="instances with additional information like path, snippet and how to fix"><li><div data-automation-id="instance-card" class="instance-details-card-container--KLHTp"><div class="instance-details-card--owGQF"><div><table class="report-instance-table--3VoZX"><tbody><tr class="row---3i35"><th class="row-label--FlVZl">Path</th><td class="row-content--07KUh">.c2-j</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">Snippet</th><td class="row-content--07KUh snippet--hSNfv">&lt;div role=&quot;img&quot; data-aid=&quot;RSS_SECTION_BACKGROUND&quot; data-ux=&quot;Background&quot; class=&quot;x-el x-el-div c2-1 c2-2 c2-h c2-i c2-j c2-k c2-l c2-m c2-3 c2-4 c2-n c2-o c2-p c2-q c2-r c2-s c2-t c2-u c2-v c2-w c2-x c2-y c2-z c2-10 c2-11 c2-12 c2-13 c2-14 c2-15 c2-16 c2-17 c2-5 c2-6 c2-7 c2-8&quot;&gt;</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">How to fix</th><td class="row-content--07KUh"><div class="how-to-fix-content--Zz96u"><div><div>Fix the following:</div><ul><li>Element has focusable descendants</li></ul></div></div></td></tr></tbody></table></div></div></div></li></ul></div></div><div class="collapsible-container collapsible-rule-details-group--V-HWh collapsed"><h4 class="heading-element-for-level--ifVX6 title-container"><button class="collapsible-control" aria-expanded="false" aria-controls="content-container-role-img-alt" aria-label="role-img-alt 11 Failed Ensures [role=&#x27;img&#x27;] elements have alternate text"><span data-automation-id="rule-detail" class="rule-detail"><span class="outcome-chip-container--G5Dfr"><span aria-hidden="true"><span class="outcome-chip outcome-chip-fail" title="11 Failed"><span class="icon"><span class="check-container"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#E81123"></circle><path d="M10.9837 6.27639C11.3352 5.92491 11.3352 5.35507 10.9837 5.00359C10.6322 4.65212 10.0624 4.65212 9.7109 5.00359L7.99722 6.71728L6.28375 5.00381C5.93227 4.65234 5.36242 4.65234 5.01095 5.00381C4.65948 5.35528 4.65948 5.92513 5.01095 6.2766L6.72443 7.99007L4.9837 9.7308C4.63222 10.0823 4.63222 10.6521 4.9837 11.0036C5.33517 11.3551 5.90502 11.3551 6.25649 11.0036L7.99722 9.26287L9.73816 11.0038C10.0896 11.3553 10.6595 11.3553 11.011 11.0038C11.3624 10.6523 11.3624 10.0825 11.011 9.73101L9.27001 7.99007L10.9837 6.27639Z" fill="var(--neutral-0)"></path></svg></span></span><span data-automation-id="count" class="count" aria-hidden="true"> 11</span><span class="screen-reader-only">11 Failed</span></span></span></span><span><span data-automation-id="cards-rule-id" class="rule-details-id"><strong>role-img-alt</strong></span>: <span class="rule-details-description">Ensures [role=&#x27;img&#x27;] elements have alternate text</span></span></span></button></h4><div id="content-container-role-img-alt" class="collapsible-content" aria-hidden="true"><div class="rule-more-resources--uw9mc"><div class="more-resources-title--jOuUL">Resources for this rule</div><span class="rule-details-id--s-TpO"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/role-img-alt" class="ms-Link insights-link root-186">More information about role-img-alt</a></span><span class="rule-guidance--TIQgm"><span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" class="ms-Link insights-link root-186">WCAG 1.1.1</a></span></span></div><ul data-automation-id="cards-rule-content" class="instance-details-list--YfkRy" aria-label="instances with additional information like path, snippet and how to fix"><li><div data-automation-id="instance-card" class="instance-details-card-container--KLHTp"><div class="instance-details-card--owGQF"><div><table class="report-instance-table--3VoZX"><tbody><tr class="row---3i35"><th class="row-label--FlVZl">Path</th><td class="row-content--07KUh">.c2-j</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">Snippet</th><td class="row-content--07KUh snippet--hSNfv">&lt;div role=&quot;img&quot; data-aid=&quot;RSS_SECTION_BACKGROUND&quot; data-ux=&quot;Background&quot; class=&quot;x-el x-el-div c2-1 c2-2 c2-h c2-i c2-j c2-k c2-l c2-m c2-3 c2-4 c2-n c2-o c2-p c2-q c2-r c2-s c2-t c2-u c2-v c2-w c2-x c2-y c2-z c2-10 c2-11 c2-12 c2-13 c2-14 c2-15 c2-16 c2-17 c2-5 c2-6 c2-7 c2-8&quot;&gt;</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">How to fix</th><td class="row-content--07KUh"><div class="how-to-fix-content--Zz96u"><div><div>Fix ONE of the following:</div><ul><li>aria-label attribute does not exist or is empty</li><li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li><li>Element has no title attribute</li></ul></div></div></td></tr></tbody></table></div></div></div></li><li><div data-automation-id="instance-card" class="instance-details-card-container--KLHTp"><div class="instance-details-card--owGQF"><div><table class="report-instance-table--3VoZX"><tbody><tr class="row---3i35"><th class="row-label--FlVZl">Path</th><td class="row-content--07KUh">li[data-index=&quot;-1&quot;] &gt; .c2-27.c2-28[rel=&quot;noopener&quot;] &gt; .c2-29.c2-2a[data-aid=&quot;RSS_FEED_RENDERED_9&quot;] &gt; .c2-1.c2-2[data-ux=&quot;Block&quot;]:nth-child(1) &gt; .c2-2q.c2-2o.c2-2p</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">Snippet</th><td class="row-content--07KUh snippet--hSNfv">&lt;div role=&quot;img&quot; data-aid=&quot;BACKGROUND_IMAGE_RENDERED&quot; data-ux=&quot;Background&quot; class=&quot;x-el x-el-div c2-1 c2-2 c2-h c2-2o c2-2p c2-k c2-l c2-m c2-2q c2-3 c2-4 c2-5 c2-6 c2-7 c2-8&quot;&gt;&lt;/div&gt;</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">How to fix</th><td class="row-content--07KUh"><div class="how-to-fix-content--Zz96u"><div><div>Fix ONE of the following:</div><ul><li>aria-label attribute does not exist or is empty</li><li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li><li>Element has no title attribute</li></ul></div></div></td></tr></tbody></table></div></div></div></li><li><div data-automation-id="instance-card" class="instance-details-card-container--KLHTp"><div class="instance-details-card--owGQF"><div><table class="report-instance-table--3VoZX"><tbody><tr class="row---3i35"><th class="row-label--FlVZl">Path</th><td class="row-content--07KUh">li[data-index=&quot;0&quot;] &gt; .c2-27.c2-28[rel=&quot;noopener&quot;] &gt; .c2-29.c2-2a[data-aid=&quot;RSS_FEED_RENDERED_0&quot;] &gt; .c2-1.c2-2[data-ux=&quot;Block&quot;]:nth-child(1) &gt; .c2-3q.c2-2o.c2-2p</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">Snippet</th><td class="row-content--07KUh snippet--hSNfv">&lt;div role=&quot;img&quot; data-aid=&quot;BACKGROUND_IMAGE_RENDERED&quot; data-ux=&quot;Background&quot; class=&quot;x-el x-el-div c2-1 c2-2 c2-h c2-2o c2-2p c2-k c2-l c2-m c2-3q c2-3 c2-4 c2-5 c2-6 c2-7 c2-8&quot;&gt;&lt;/div&gt;</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">How to fix</th><td class="row-content--07KUh"><div class="how-to-fix-content--Zz96u"><div><div>Fix ONE of the following:</div><ul><li>aria-label attribute does not exist or is empty</li><li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li><li>Element has no title attribute</li></ul></div></div></td></tr></tbody></table></div></div></div></li><li><div data-automation-id="instance-card" class="instance-details-card-container--KLHTp"><div class="instance-details-card--owGQF"><div><table class="report-instance-table--3VoZX"><tbody><tr class="row---3i35"><th class="row-label--FlVZl">Path</th><td class="row-content--07KUh">li[data-index=&quot;1&quot;] &gt; .c2-27.c2-28[rel=&quot;noopener&quot;] &gt; .c2-29.c2-2a[data-aid=&quot;RSS_FEED_RENDERED_1&quot;] &gt; .c2-1.c2-2[data-ux=&quot;Block&quot;]:nth-child(1) &gt; .c2-3r.c2-2o.c2-2p</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">Snippet</th><td class="row-content--07KUh snippet--hSNfv">&lt;div role=&quot;img&quot; data-aid=&quot;BACKGROUND_IMAGE_RENDERED&quot; data-ux=&quot;Background&quot; class=&quot;x-el x-el-div c2-1 c2-2 c2-h c2-2o c2-2p c2-k c2-l c2-m c2-3r c2-3 c2-4 c2-5 c2-6 c2-7 c2-8&quot;&gt;&lt;/div&gt;</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">How to fix</th><td class="row-content--07KUh"><div class="how-to-fix-content--Zz96u"><div><div>Fix ONE of the following:</div><ul><li>aria-label attribute does not exist or is empty</li><li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li><li>Element has no title attribute</li></ul></div></div></td></tr></tbody></table></div></div></div></li><li><div data-automation-id="instance-card" class="instance-details-card-container--KLHTp"><div class="instance-details-card--owGQF"><div><table class="report-instance-table--3VoZX"><tbody><tr class="row---3i35"><th class="row-label--FlVZl">Path</th><td class="row-content--07KUh">.c2-3s</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">Snippet</th><td class="row-content--07KUh snippet--hSNfv">&lt;div role=&quot;img&quot; data-aid=&quot;BACKGROUND_IMAGE_RENDERED&quot; data-ux=&quot;Background&quot; class=&quot;x-el x-el-div c2-1 c2-2 c2-h c2-2o c2-2p c2-k c2-l c2-m c2-3s c2-3 c2-4 c2-5 c2-6 c2-7 c2-8&quot;&gt;&lt;/div&gt;</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">How to fix</th><td class="row-content--07KUh"><div class="how-to-fix-content--Zz96u"><div><div>Fix ONE of the following:</div><ul><li>aria-label attribute does not exist or is empty</li><li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li><li>Element has no title attribute</li></ul></div></div></td></tr></tbody></table></div></div></div></li><li><div data-automation-id="instance-card" class="instance-details-card-container--KLHTp"><div class="instance-details-card--owGQF"><div><table class="report-instance-table--3VoZX"><tbody><tr class="row---3i35"><th class="row-label--FlVZl">Path</th><td class="row-content--07KUh">.c2-3t</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">Snippet</th><td class="row-content--07KUh snippet--hSNfv">&lt;div role=&quot;img&quot; data-aid=&quot;BACKGROUND_IMAGE_RENDERED&quot; data-ux=&quot;Background&quot; class=&quot;x-el x-el-div c2-1 c2-2 c2-h c2-2o c2-2p c2-k c2-l c2-m c2-3t c2-3 c2-4 c2-5 c2-6 c2-7 c2-8&quot;&gt;&lt;/div&gt;</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">How to fix</th><td class="row-content--07KUh"><div class="how-to-fix-content--Zz96u"><div><div>Fix ONE of the following:</div><ul><li>aria-label attribute does not exist or is empty</li><li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li><li>Element has no title attribute</li></ul></div></div></td></tr></tbody></table></div></div></div></li><li><div data-automation-id="instance-card" class="instance-details-card-container--KLHTp"><div class="instance-details-card--owGQF"><div><table class="report-instance-table--3VoZX"><tbody><tr class="row---3i35"><th class="row-label--FlVZl">Path</th><td class="row-content--07KUh">.c2-3u</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">Snippet</th><td class="row-content--07KUh snippet--hSNfv">&lt;div role=&quot;img&quot; data-aid=&quot;BACKGROUND_IMAGE_RENDERED&quot; data-ux=&quot;Background&quot; class=&quot;x-el x-el-div c2-1 c2-2 c2-h c2-2o c2-2p c2-k c2-l c2-m c2-3u c2-3 c2-4 c2-5 c2-6 c2-7 c2-8&quot;&gt;&lt;/div&gt;</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">How to fix</th><td class="row-content--07KUh"><div class="how-to-fix-content--Zz96u"><div><div>Fix ONE of the following:</div><ul><li>aria-label attribute does not exist or is empty</li><li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li><li>Element has no title attribute</li></ul></div></div></td></tr></tbody></table></div></div></div></li><li><div data-automation-id="instance-card" class="instance-details-card-container--KLHTp"><div class="instance-details-card--owGQF"><div><table class="report-instance-table--3VoZX"><tbody><tr class="row---3i35"><th class="row-label--FlVZl">Path</th><td class="row-content--07KUh">.c2-3v</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">Snippet</th><td class="row-content--07KUh snippet--hSNfv">&lt;div role=&quot;img&quot; data-aid=&quot;BACKGROUND_IMAGE_RENDERED&quot; data-ux=&quot;Background&quot; class=&quot;x-el x-el-div c2-1 c2-2 c2-h c2-2o c2-2p c2-k c2-l c2-m c2-3v c2-3 c2-4 c2-5 c2-6 c2-7 c2-8&quot;&gt;&lt;/div&gt;</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">How to fix</th><td class="row-content--07KUh"><div class="how-to-fix-content--Zz96u"><div><div>Fix ONE of the following:</div><ul><li>aria-label attribute does not exist or is empty</li><li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li><li>Element has no title attribute</li></ul></div></div></td></tr></tbody></table></div></div></div></li><li><div data-automation-id="instance-card" class="instance-details-card-container--KLHTp"><div class="instance-details-card--owGQF"><div><table class="report-instance-table--3VoZX"><tbody><tr class="row---3i35"><th class="row-label--FlVZl">Path</th><td class="row-content--07KUh">li[data-index=&quot;9&quot;] &gt; .c2-27.c2-28[rel=&quot;noopener&quot;] &gt; .c2-29.c2-2a[data-aid=&quot;RSS_FEED_RENDERED_9&quot;] &gt; .c2-1.c2-2[data-ux=&quot;Block&quot;]:nth-child(1) &gt; .c2-2q.c2-2o.c2-2p</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">Snippet</th><td class="row-content--07KUh snippet--hSNfv">&lt;div role=&quot;img&quot; data-aid=&quot;BACKGROUND_IMAGE_RENDERED&quot; data-ux=&quot;Background&quot; class=&quot;x-el x-el-div c2-1 c2-2 c2-h c2-2o c2-2p c2-k c2-l c2-m c2-2q c2-3 c2-4 c2-5 c2-6 c2-7 c2-8&quot;&gt;&lt;/div&gt;</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">How to fix</th><td class="row-content--07KUh"><div class="how-to-fix-content--Zz96u"><div><div>Fix ONE of the following:</div><ul><li>aria-label attribute does not exist or is empty</li><li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li><li>Element has no title attribute</li></ul></div></div></td></tr></tbody></table></div></div></div></li><li><div data-automation-id="instance-card" class="instance-details-card-container--KLHTp"><div class="instance-details-card--owGQF"><div><table class="report-instance-table--3VoZX"><tbody><tr class="row---3i35"><th class="row-label--FlVZl">Path</th><td class="row-content--07KUh">li[data-index=&quot;10&quot;] &gt; .c2-27.c2-28[rel=&quot;noopener&quot;] &gt; .c2-29.c2-2a[data-aid=&quot;RSS_FEED_RENDERED_0&quot;] &gt; .c2-1.c2-2[data-ux=&quot;Block&quot;]:nth-child(1) &gt; .c2-3q.c2-2o.c2-2p</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">Snippet</th><td class="row-content--07KUh snippet--hSNfv">&lt;div role=&quot;img&quot; data-aid=&quot;BACKGROUND_IMAGE_RENDERED&quot; data-ux=&quot;Background&quot; class=&quot;x-el x-el-div c2-1 c2-2 c2-h c2-2o c2-2p c2-k c2-l c2-m c2-3q c2-3 c2-4 c2-5 c2-6 c2-7 c2-8&quot;&gt;&lt;/div&gt;</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">How to fix</th><td class="row-content--07KUh"><div class="how-to-fix-content--Zz96u"><div><div>Fix ONE of the following:</div><ul><li>aria-label attribute does not exist or is empty</li><li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li><li>Element has no title attribute</li></ul></div></div></td></tr></tbody></table></div></div></div></li><li><div data-automation-id="instance-card" class="instance-details-card-container--KLHTp"><div class="instance-details-card--owGQF"><div><table class="report-instance-table--3VoZX"><tbody><tr class="row---3i35"><th class="row-label--FlVZl">Path</th><td class="row-content--07KUh">li[data-index=&quot;11&quot;] &gt; .c2-27.c2-28[rel=&quot;noopener&quot;] &gt; .c2-29.c2-2a[data-aid=&quot;RSS_FEED_RENDERED_1&quot;] &gt; .c2-1.c2-2[data-ux=&quot;Block&quot;]:nth-child(1) &gt; .c2-3r.c2-2o.c2-2p</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">Snippet</th><td class="row-content--07KUh snippet--hSNfv">&lt;div role=&quot;img&quot; data-aid=&quot;BACKGROUND_IMAGE_RENDERED&quot; data-ux=&quot;Background&quot; class=&quot;x-el x-el-div c2-1 c2-2 c2-h c2-2o c2-2p c2-k c2-l c2-m c2-3r c2-3 c2-4 c2-5 c2-6 c2-7 c2-8&quot;&gt;&lt;/div&gt;</td></tr><tr class="row---3i35"><th class="row-label--FlVZl">How to fix</th><td class="row-content--07KUh"><div class="how-to-fix-content--Zz96u"><div><div>Fix ONE of the following:</div><ul><li>aria-label attribute does not exist or is empty</li><li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li><li>Element has no title attribute</li></ul></div></div></td></tr></tbody></table></div></div></div></li></ul></div></div></div></div><div class="result-section"><div class="collapsible-container collapsed"><h3 class="heading-element-for-level--ifVX6 title-container"><button class="collapsible-control" aria-expanded="false" aria-controls="content-container-incomplete-checks-section-automated-checks"><span class="result-section-title--RGFI5"><span class="screen-reader-only">Incomplete checks 0</span><span class="title--WBYFE" aria-hidden="true">Incomplete checks</span><span class="outcome-chip-container--BT3j5" aria-hidden="true"><span class="outcome-chip outcome-chip-incomplete" title="0 Incomplete"><span class="icon"><span class="check-container"></span></span><span data-automation-id="count" class="count" aria-hidden="true"> 0</span><span class="screen-reader-only">0 Incomplete</span></span></span></span></button></h3><div id="content-container-incomplete-checks-section-automated-checks" class="collapsible-content" aria-hidden="true"><div class="rule-details-group--Tb-LW"></div></div></div></div><div class="result-section"><div class="collapsible-container collapsed"><h3 class="heading-element-for-level--ifVX6 title-container"><button class="collapsible-control" aria-expanded="false" aria-controls="content-container-passed-checks-section-automated-checks"><span class="result-section-title--RGFI5"><span class="screen-reader-only">Passed checks 24</span><span class="title--WBYFE" aria-hidden="true">Passed checks</span><span class="outcome-chip-container--BT3j5" aria-hidden="true"><span class="outcome-chip outcome-chip-pass" title="24 Passed"><span class="icon"><span class="check-container"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#228722"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M6.05904 11.1417L6.0616 11.1442C6.10737 11.19 6.15668 11.23 6.20867 11.2643C6.57256 11.5046 7.06707 11.4646 7.38742 11.1442C7.38861 11.143 7.38982 11.1418 7.391 11.1406L11.9312 6.60041C12.2974 6.23427 12.2974 5.64071 11.9312 5.27457C11.5651 4.90848 10.9715 4.90848 10.6054 5.27457L6.72452 9.15545L5.60041 8.03134C5.2343 7.66524 4.64071 7.66524 4.27459 8.03134C3.90847 8.39747 3.90847 8.99104 4.27459 9.35718L6.05904 11.1417Z" fill="var(--neutral-0)"></path></svg></span></span><span data-automation-id="count" class="count" aria-hidden="true"> 24</span><span class="screen-reader-only">24 Passed</span></span></span></span></button></h3><div id="content-container-passed-checks-section-automated-checks" class="collapsible-content" aria-hidden="true"><div class="rule-details-group--Tb-LW"><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/aria-allowed-attr" class="ms-Link insights-link root-186" aria-label="rule aria-allowed-attr" aria-describedby="passed-rule-aria-allowed-attr-description">aria-allowed-attr</a></span>: <span class="rule-details-description" id="passed-rule-aria-allowed-attr-description">Ensures ARIA attributes are allowed for an element&#x27;s role</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" class="ms-Link insights-link root-186">WCAG 4.1.2</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://dequeuniversity.com/rules/axe/4.4/aria-allowed-role?application=msftAI" class="ms-Link insights-link root-186" aria-label="rule aria-allowed-role" aria-describedby="passed-rule-aria-allowed-role-description">aria-allowed-role</a></span>: <span class="rule-details-description" id="passed-rule-aria-allowed-role-description">Ensures role attribute has an appropriate value for the element</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" class="ms-Link insights-link root-186">WCAG 1.3.1</a><span>, </span><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" class="ms-Link insights-link root-186">WCAG 4.1.2</a></span>)<span class="guidance-tags"><span>Best Practice</span></span></div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://dequeuniversity.com/rules/axe/4.4/aria-command-name?application=msftAI" class="ms-Link insights-link root-186" aria-label="rule aria-command-name" aria-describedby="passed-rule-aria-command-name-description">aria-command-name</a></span>: <span class="rule-details-description" id="passed-rule-aria-command-name-description">Ensures every ARIA button, link and menuitem has an accessible name</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" class="ms-Link insights-link root-186">WCAG 4.1.2</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/aria-hidden-body" class="ms-Link insights-link root-186" aria-label="rule aria-hidden-body" aria-describedby="passed-rule-aria-hidden-body-description">aria-hidden-body</a></span>: <span class="rule-details-description" id="passed-rule-aria-hidden-body-description">Ensures aria-hidden=&#x27;true&#x27; is not present on the document body.</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" class="ms-Link insights-link root-186">WCAG 4.1.2</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/aria-hidden-focus" class="ms-Link insights-link root-186" aria-label="rule aria-hidden-focus" aria-describedby="passed-rule-aria-hidden-focus-description">aria-hidden-focus</a></span>: <span class="rule-details-description" id="passed-rule-aria-hidden-focus-description">Ensures aria-hidden elements do not contain focusable elements</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" class="ms-Link insights-link root-186">WCAG 1.3.1</a><span>, </span><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" class="ms-Link insights-link root-186">WCAG 4.1.2</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/aria-required-attr" class="ms-Link insights-link root-186" aria-label="rule aria-required-attr" aria-describedby="passed-rule-aria-required-attr-description">aria-required-attr</a></span>: <span class="rule-details-description" id="passed-rule-aria-required-attr-description">Ensures elements with ARIA roles have all required ARIA attributes</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" class="ms-Link insights-link root-186">WCAG 4.1.2</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/aria-required-children" class="ms-Link insights-link root-186" aria-label="rule aria-required-children" aria-describedby="passed-rule-aria-required-children-description">aria-required-children</a></span>: <span class="rule-details-description" id="passed-rule-aria-required-children-description">Ensures elements with an ARIA role that require child roles contain them</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" class="ms-Link insights-link root-186">WCAG 1.3.1</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/aria-required-parent" class="ms-Link insights-link root-186" aria-label="rule aria-required-parent" aria-describedby="passed-rule-aria-required-parent-description">aria-required-parent</a></span>: <span class="rule-details-description" id="passed-rule-aria-required-parent-description">Ensures elements with an ARIA role that require parent roles are contained by them</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" class="ms-Link insights-link root-186">WCAG 1.3.1</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/aria-roles" class="ms-Link insights-link root-186" aria-label="rule aria-roles" aria-describedby="passed-rule-aria-roles-description">aria-roles</a></span>: <span class="rule-details-description" id="passed-rule-aria-roles-description">Ensures all elements with a role attribute use a valid value</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" class="ms-Link insights-link root-186">WCAG 4.1.2</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/aria-valid-attr-value" class="ms-Link insights-link root-186" aria-label="rule aria-valid-attr-value" aria-describedby="passed-rule-aria-valid-attr-value-description">aria-valid-attr-value</a></span>: <span class="rule-details-description" id="passed-rule-aria-valid-attr-value-description">Ensures all ARIA attributes have valid values</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" class="ms-Link insights-link root-186">WCAG 4.1.2</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/aria-valid-attr" class="ms-Link insights-link root-186" aria-label="rule aria-valid-attr" aria-describedby="passed-rule-aria-valid-attr-description">aria-valid-attr</a></span>: <span class="rule-details-description" id="passed-rule-aria-valid-attr-description">Ensures attributes that begin with aria- are valid ARIA attributes</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" class="ms-Link insights-link root-186">WCAG 4.1.2</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/avoid-inline-spacing" class="ms-Link insights-link root-186" aria-label="rule avoid-inline-spacing" aria-describedby="passed-rule-avoid-inline-spacing-description">avoid-inline-spacing</a></span>: <span class="rule-details-description" id="passed-rule-avoid-inline-spacing-description">Ensure that text spacing set through style attributes can be adjusted with custom stylesheets</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html" class="ms-Link insights-link root-186">WCAG 1.4.12</a></span>)<span class="guidance-tags"><span>New for WCAG 2.1</span></span></div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/button-name" class="ms-Link insights-link root-186" aria-label="rule button-name" aria-describedby="passed-rule-button-name-description">button-name</a></span>: <span class="rule-details-description" id="passed-rule-button-name-description">Ensures buttons have discernible text</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" class="ms-Link insights-link root-186">WCAG 4.1.2</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/bypass" class="ms-Link insights-link root-186" aria-label="rule bypass" aria-describedby="passed-rule-bypass-description">bypass</a></span>: <span class="rule-details-description" id="passed-rule-bypass-description">Ensures each page has at least one mechanism for a user to bypass navigation and jump straight to the content</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks" class="ms-Link insights-link root-186">WCAG 2.4.1</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/color-contrast" class="ms-Link insights-link root-186" aria-label="rule color-contrast" aria-describedby="passed-rule-color-contrast-description">color-contrast</a></span>: <span class="rule-details-description" id="passed-rule-color-contrast-description">Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" class="ms-Link insights-link root-186">WCAG 1.4.3</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/document-title" class="ms-Link insights-link root-186" aria-label="rule document-title" aria-describedby="passed-rule-document-title-description">document-title</a></span>: <span class="rule-details-description" id="passed-rule-document-title-description">Ensures each HTML document contains a non-empty &lt;title&gt; element</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html" class="ms-Link insights-link root-186">WCAG 2.4.2</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/duplicate-id-active" class="ms-Link insights-link root-186" aria-label="rule duplicate-id-active" aria-describedby="passed-rule-duplicate-id-active-description">duplicate-id-active</a></span>: <span class="rule-details-description" id="passed-rule-duplicate-id-active-description">Ensures every id attribute value of active elements is unique</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/parsing.html" class="ms-Link insights-link root-186">WCAG 4.1.1</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/html-has-lang" class="ms-Link insights-link root-186" aria-label="rule html-has-lang" aria-describedby="passed-rule-html-has-lang-description">html-has-lang</a></span>: <span class="rule-details-description" id="passed-rule-html-has-lang-description">Ensures every HTML document has a lang attribute</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html" class="ms-Link insights-link root-186">WCAG 3.1.1</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/html-lang-valid" class="ms-Link insights-link root-186" aria-label="rule html-lang-valid" aria-describedby="passed-rule-html-lang-valid-description">html-lang-valid</a></span>: <span class="rule-details-description" id="passed-rule-html-lang-valid-description">Ensures the lang attribute of the &lt;html&gt; element has a valid value</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html" class="ms-Link insights-link root-186">WCAG 3.1.1</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/image-alt" class="ms-Link insights-link root-186" aria-label="rule image-alt" aria-describedby="passed-rule-image-alt-description">image-alt</a></span>: <span class="rule-details-description" id="passed-rule-image-alt-description">Ensures &lt;img&gt; elements have alternate text or a role of none or presentation</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html" class="ms-Link insights-link root-186">WCAG 1.1.1</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/link-name" class="ms-Link insights-link root-186" aria-label="rule link-name" aria-describedby="passed-rule-link-name-description">link-name</a></span>: <span class="rule-details-description" id="passed-rule-link-name-description">Ensures links have discernible text</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html" class="ms-Link insights-link root-186">WCAG 2.4.4</a><span>, </span><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" class="ms-Link insights-link root-186">WCAG 4.1.2</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/list" class="ms-Link insights-link root-186" aria-label="rule list" aria-describedby="passed-rule-list-description">list</a></span>: <span class="rule-details-description" id="passed-rule-list-description">Ensures that lists are structured correctly</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" class="ms-Link insights-link root-186">WCAG 1.3.1</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://accessibilityinsights.io/info-examples/web/listitem" class="ms-Link insights-link root-186" aria-label="rule listitem" aria-describedby="passed-rule-listitem-description">listitem</a></span>: <span class="rule-details-description" id="passed-rule-listitem-description">Ensures &lt;li&gt; elements are used semantically</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" class="ms-Link insights-link root-186">WCAG 1.3.1</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id"><a target="_blank" href="https://dequeuniversity.com/rules/axe/4.4/nested-interactive?application=msftAI" class="ms-Link insights-link root-186" aria-label="rule nested-interactive" aria-describedby="passed-rule-nested-interactive-description">nested-interactive</a></span>: <span class="rule-details-description" id="passed-rule-nested-interactive-description">Ensures interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html" class="ms-Link insights-link root-186">WCAG 4.1.2</a></span>)</div></div></div></div></div></div><div class="title-section"><h2>Tab stops</h2></div><div class="tab-stops-failure-instance-section--PhQjL" data-automation-id="tab-stops-failure-instance-section"><h3 class="heading-element-for-level--ifVX6"><span class="result-section-title--RGFI5"><span class="screen-reader-only">Failed instances 35</span><span class="title--WBYFE" aria-hidden="true">Failed instances</span><span class="outcome-chip-container--BT3j5" aria-hidden="true"><span class="outcome-chip outcome-chip-fail" title="35 Failed"><span class="icon"><span class="check-container"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#E81123"></circle><path d="M10.9837 6.27639C11.3352 5.92491 11.3352 5.35507 10.9837 5.00359C10.6322 4.65212 10.0624 4.65212 9.7109 5.00359L7.99722 6.71728L6.28375 5.00381C5.93227 4.65234 5.36242 4.65234 5.01095 5.00381C4.65948 5.35528 4.65948 5.92513 5.01095 6.2766L6.72443 7.99007L4.9837 9.7308C4.63222 10.0823 4.63222 10.6521 4.9837 11.0036C5.33517 11.3551 5.90502 11.3551 6.25649 11.0036L7.99722 9.26287L9.73816 11.0038C10.0896 11.3553 10.6595 11.3553 11.011 11.0038C11.3624 10.6523 11.3624 10.0825 11.011 9.73101L9.27001 7.99007L10.9837 6.27639Z" fill="var(--neutral-0)"></path></svg></span></span><span data-automation-id="count" class="count" aria-hidden="true"> 35</span><span class="screen-reader-only">35 Failed</span></span></span></span></h3><div><div class="collapsible-container collapsible-requirement-details-group--A40l5 collapsed"><h4 class="heading-element-for-level--ifVX6 title-container"><button class="collapsible-control" aria-expanded="false" aria-controls="content-container-keyboard-navigation" aria-label="keyboard-navigation 35 Failed All interactive elements can be reached using the Tab and arrow keys. (Partially automated)"><span class="requirement-detail--A9HmV"><span class="outcome-chip-container--hHuUe"><span aria-hidden="true"><span class="outcome-chip outcome-chip-fail" title="35 Failed"><span class="icon"><span class="check-container"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#E81123"></circle><path d="M10.9837 6.27639C11.3352 5.92491 11.3352 5.35507 10.9837 5.00359C10.6322 4.65212 10.0624 4.65212 9.7109 5.00359L7.99722 6.71728L6.28375 5.00381C5.93227 4.65234 5.36242 4.65234 5.01095 5.00381C4.65948 5.35528 4.65948 5.92513 5.01095 6.2766L6.72443 7.99007L4.9837 9.7308C4.63222 10.0823 4.63222 10.6521 4.9837 11.0036C5.33517 11.3551 5.90502 11.3551 6.25649 11.0036L7.99722 9.26287L9.73816 11.0038C10.0896 11.3553 10.6595 11.3553 11.011 11.0038C11.3624 10.6523 11.3624 10.0825 11.011 9.73101L9.27001 7.99007L10.9837 6.27639Z" fill="var(--neutral-0)"></path></svg></span></span><span data-automation-id="count" class="count" aria-hidden="true"> 35</span><span class="screen-reader-only">35 Failed</span></span></span></span><span><span class="requirement-details-id--tFytl"><strong>Keyboard navigation</strong></span>: <span class="requirement-detail-description--LIhWd">All interactive elements can be reached using the Tab and arrow keys. (Partially automated)</span></span></span></button></h4><div id="content-container-keyboard-navigation" class="collapsible-content" aria-hidden="true"><div class="instance-list--hveoz"><div><table class="instance-details"><tbody><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: .c1-25 &gt; .c1-2f.c1-2h.c1-2i &gt; .c1-2w.c1-2t[title=&quot;Money Convey&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: a[data-ux=&quot;SidebarLinkActive&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: a[href$=&quot;about-us&quot;][data-ux=&quot;SidebarLink&quot;][data-typography=&quot;NavAlpha&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: a[href$=&quot;blockchain-services&quot;][data-ux=&quot;SidebarLink&quot;][data-typography=&quot;NavAlpha&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: a[href$=&quot;whitepaper&quot;][data-ux=&quot;SidebarLink&quot;][data-typography=&quot;NavAlpha&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: a[href$=&quot;resources&quot;][data-ux=&quot;SidebarLink&quot;][data-typography=&quot;NavAlpha&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: a[href$=&quot;join-the-waitlist&quot;][data-ux=&quot;SidebarLink&quot;][data-typography=&quot;NavAlpha&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: a[data-ux=&quot;NavigationDrawerLinkActive&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: .c1-7l[href$=&quot;about-us&quot;][data-ux=&quot;NavigationDrawerLink&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: .c1-7l[href$=&quot;blockchain-services&quot;][data-ux=&quot;NavigationDrawerLink&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: .c1-7l[href$=&quot;whitepaper&quot;][data-ux=&quot;NavigationDrawerLink&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: .c1-7l[href$=&quot;resources&quot;][data-ux=&quot;NavigationDrawerLink&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: .c1-7l[href$=&quot;join-the-waitlist&quot;][data-ux=&quot;NavigationDrawerLink&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: li[data-index=&quot;-1&quot;] &gt; .c2-27.c2-28[rel=&quot;noopener&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: li[data-index=&quot;0&quot;] &gt; .c2-27.c2-28[rel=&quot;noopener&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: li[data-index=&quot;1&quot;] &gt; .c2-27.c2-28[rel=&quot;noopener&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: .carousel-slide-selected &gt; .c2-27.c2-28[rel=&quot;noopener&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: li[data-index=&quot;3&quot;] &gt; .c2-27.c2-28[rel=&quot;noopener&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: li[data-index=&quot;4&quot;] &gt; .c2-27.c2-28[rel=&quot;noopener&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: li[data-index=&quot;5&quot;] &gt; .c2-27.c2-28[rel=&quot;noopener&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: li[data-index=&quot;9&quot;] &gt; .c2-27.c2-28[rel=&quot;noopener&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: li[data-index=&quot;10&quot;] &gt; .c2-27.c2-28[rel=&quot;noopener&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: li[data-index=&quot;11&quot;] &gt; .c2-27.c2-28[rel=&quot;noopener&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: a[data-aid=&quot;CONTENT_CTA_BTN1_RENDERED&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: a[data-aid=&quot;CONTENT_CTA_BTN2_RENDERED&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: a[data-aid=&quot;CONTENT_CTA_BTN3_RENDERED&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: a[data-aid=&quot;CONTENT_CTA_BTN4_RENDERED&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: a[data-aid=&quot;CONTACT_INFO_EMAIL_REND&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: button.</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: a[rel=&quot;nofollow noopener&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: a[data-aid=&quot;FOOTER_PAGE_LINK_0_RENDERED&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: a[data-aid=&quot;FOOTER_PAGE_LINK_1_RENDERED&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: a[data-aid=&quot;FOOTER_PAGE_LINK_2_RENDERED&quot;].</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: #\32 5a274f5-aca0-4d45-8059-ac9d99e28a2f-accept.</td></tr><tr class="instance-pair-details"><th class="instance-key">Comment</th><td class="instance-value">[Automatically detected, needs review] Unreachable element: #reamaze-widget.</td></tr></tbody></table></div></div></div></div></div></div><div class="result-section"><div class="collapsible-container collapsed"><h3 class="heading-element-for-level--ifVX6 title-container"><button class="collapsible-control" aria-expanded="false" aria-controls="content-container-incomplete-checks-section-tab-stops"><span class="result-section-title--RGFI5"><span class="screen-reader-only">Incomplete checks 0</span><span class="title--WBYFE" aria-hidden="true">Incomplete checks</span><span class="outcome-chip-container--BT3j5" aria-hidden="true"><span class="outcome-chip outcome-chip-incomplete" title="0 Incomplete"><span class="icon"><span class="check-container"></span></span><span data-automation-id="count" class="count" aria-hidden="true"> 0</span><span class="screen-reader-only">0 Incomplete</span></span></span></span></button></h3><div id="content-container-incomplete-checks-section-tab-stops" class="collapsible-content" aria-hidden="true"><div class="rule-details-group--Tb-LW"></div></div></div></div><div class="result-section"><div class="collapsible-container collapsed"><h3 class="heading-element-for-level--ifVX6 title-container"><button class="collapsible-control" aria-expanded="false" aria-controls="content-container-passed-checks-section-tab-stops"><span class="result-section-title--RGFI5"><span class="screen-reader-only">Passed checks 4</span><span class="title--WBYFE" aria-hidden="true">Passed checks</span><span class="outcome-chip-container--BT3j5" aria-hidden="true"><span class="outcome-chip outcome-chip-pass" title="4 Passed"><span class="icon"><span class="check-container"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#228722"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M6.05904 11.1417L6.0616 11.1442C6.10737 11.19 6.15668 11.23 6.20867 11.2643C6.57256 11.5046 7.06707 11.4646 7.38742 11.1442C7.38861 11.143 7.38982 11.1418 7.391 11.1406L11.9312 6.60041C12.2974 6.23427 12.2974 5.64071 11.9312 5.27457C11.5651 4.90848 10.9715 4.90848 10.6054 5.27457L6.72452 9.15545L5.60041 8.03134C5.2343 7.66524 4.64071 7.66524 4.27459 8.03134C3.90847 8.39747 3.90847 8.99104 4.27459 9.35718L6.05904 11.1417Z" fill="var(--neutral-0)"></path></svg></span></span><span data-automation-id="count" class="count" aria-hidden="true"> 4</span><span class="screen-reader-only">4 Passed</span></span></span></span></button></h3><div id="content-container-passed-checks-section-tab-stops" class="collapsible-content" aria-hidden="true"><div class="rule-details-group--Tb-LW"><div class="rule-detail"><div> <span class="rule-details-id">Keyboard traps</span>: <span class="rule-details-description" id="passed-rule-Keyboard traps-description">There are no interactive elements that “trap” input focus and prevent navigating away. (Partially automated)</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html" class="ms-Link insights-link root-186">WCAG 2.1.2</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id">Focus indicator</span>: <span class="rule-details-description" id="passed-rule-Focus indicator-description">All interactive elements give a visible indication when they have input focus. (Manual)</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html" class="ms-Link insights-link root-186">WCAG 2.4.7</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id">Tab order</span>: <span class="rule-details-description" id="passed-rule-Tab order-description">The tab order is consistent with the logical order that&#x27;s communicated visually. (Partially automated)</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html" class="ms-Link insights-link root-186">WCAG 2.4.3</a></span>)</div></div><div class="rule-detail"><div> <span class="rule-details-id">Input focus</span>: <span class="rule-details-description" id="passed-rule-Input focus-description">Input focus does not move unexpectedly without the user initiating it. (Manual)</span>(<span class="guidance-links"><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html" class="ms-Link insights-link root-186">WCAG 2.3.1</a></span>)</div></div></div></div></div></div></div><script>(function(e){let t=e.getElementsByClassName("collapsible-container");for(let r=0;r<t.length;r++){let n=t.item(r),o=n==null?void 0:n.querySelector(".collapsible-control");o!=null&&o.addEventListener("click",function(){var m;let a=(m=o.parentElement)==null?void 0:m.nextElementSibling;if(a==null)throw Error("Expected button element's parent to have a next sibling");let u=!(o.getAttribute("aria-expanded")!=="false");o.setAttribute("aria-expanded",u+""),a.setAttribute("aria-hidden",!u+""),u?n.classList.remove("collapsed"):n.classList.add("collapsed")})}})(document)</script></div></main><div class="report-footer-container"><div class="report-footer" role="contentinfo">This automated checks result was generated using Accessibility Insights for Web 2.35.0 (axe-core 4.4.1), a tool that helps debug and find accessibility issues earlier on Chrome version 105.0.0.0. Get more information &amp; download this tool at <a target="_blank" href="http://aka.ms/AccessibilityInsights" class="ms-Link insights-link tool-name-link root-186" title="Get more information and download Accessibility Insights for Web">http://aka.ms/AccessibilityInsights</a>.</div></div></body></html>
